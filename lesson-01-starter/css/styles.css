@@ -13,4 +13,9 @@ We are going to write "declarations" (what to apply)
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    font-size: 40px;
+    /* attribute is on the left seperated by a :
+    always ends in a ; */
 }
+
