@@ -19,3 +19,11 @@ h1 {
     always ends in a ; */
 }
 
+/* sometimes in css you want to apply something
+to the entire page. You can use star or the "body"
+*/
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
