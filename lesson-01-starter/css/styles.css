@@ -27,3 +27,9 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
 }
+
+/* how to select a class on an element
+put a . in front of the class name */
+.purple-background {
+    background-color: purple;
+}
