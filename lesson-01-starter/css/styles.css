@@ -32,4 +32,5 @@ body {
 put a . in front of the class name */
 .purple-background {
     background-color: purple;
+    color: white;
 }
