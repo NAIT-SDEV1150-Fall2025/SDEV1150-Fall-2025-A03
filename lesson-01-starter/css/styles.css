@@ -1,0 +1,16 @@
+/*
+This is a css comment.
+
+How we style elements
+
+Below we're going to match elements (where to apply)
+- the h1 below is where to apply
+We are going to write "declarations" (what to apply)
+- font-family
+- color
+- font-sizes
+*/
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
