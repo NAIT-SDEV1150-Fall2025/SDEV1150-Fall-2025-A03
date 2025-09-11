@@ -6,23 +6,3 @@ let title = document.querySelector("h1") //h1 is selecting that element
 
 // I'm going to modify it
 title.innerText = "Modified from JavaScript"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
