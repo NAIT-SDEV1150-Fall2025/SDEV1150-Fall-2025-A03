@@ -21,6 +21,12 @@ if (x % 2 === 0) {
 // 3. Nested if-else
 if (x > 10) {
   console.log(`x is greater ten`);
+} else if (x > 5) {
+  console.log(`x is greater five`);
+} else if (x > 1) {
+  console.log(`x is great than one`);
+} else  {
+  console.log(`x is zero or negative`);
 }
 
 
