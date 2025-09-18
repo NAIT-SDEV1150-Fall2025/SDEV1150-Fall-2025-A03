@@ -5,10 +5,26 @@ console.log('Lesson 04 starter loaded');
 // this is a way to control the flow of your code.
 const x = 5;
 if (x > 0) {
-  console.log(`x is ${x} which is positive`)
+  console.log(`x is ${x} which is positive`);
 }
 // 2. if-else
+// let's check if x is odd or even
+// in javascript we use === because it checks for the equality
+// but it also checks for the data type equality
+// this is different than other languages (python ==)
+if (x % 2 === 0) {
+  console.log(`x is even`);
+} else {
+  console.log(`x is odd`);
+}
+
 // 3. Nested if-else
+if (x > 10) {
+  console.log(`x is greater ten`);
+}
+
+
+
 // 4. while loop
 // 5. do-while loop
 // 6. for loop
