@@ -1,11 +1,17 @@
 console.log('Lesson 03 starter loaded');
 
-// Instructor TODO: 
+// Instructor TODO:
 // 1. Declare variables using var, let, const
+let greeting = "Hi Dan!";
+let count = 42;
+const isActive = true;
+
 // 2. Log their types with console.log(typeof …)
+console.log(`Type of greeting: ${ typeof greeting}`);
+
 // 3. Try built-in functions: alert(), prompt(), parseInt(), toString()
 // 4. Manipulate values and observe results in the console
 
-// Student TODO: 
+// Student TODO:
 // Prompt the user for their name and age
 // Log a greeting message using the provided name and age
