@@ -17,6 +17,13 @@ const continueDemo = confirm(`Hi ${userName} do you want to continue? `);
 console.log(`${userName} chose "${continueDemo}" to continue`);
 
 // 4. Manipulate values and observe results in the console
+let x = 12;
+let y = 3;
+console.log("Let's do Maths");
+console.log(`${x} + ${y} = ${ x + y }`);
+console.log(`${x} - ${y} = ${ x - y }`);
+console.log(`${x} * ${y} = ${ x * y }`);
+console.log(`${x} / ${y} = ${ x / y }`);
 
 // Student TODO:
 // Prompt the user for their name and age
