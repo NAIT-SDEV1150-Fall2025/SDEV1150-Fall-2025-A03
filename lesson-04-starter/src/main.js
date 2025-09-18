@@ -2,6 +2,11 @@ console.log('Lesson 04 starter loaded');
 
 // Instructor TODO:
 // 1. Simple if
+// this is a way to control the flow of your code.
+const x = 5;
+if (x > 0) {
+  console.log(`x is ${x} which is positive`)
+}
 // 2. if-else
 // 3. Nested if-else
 // 4. while loop
