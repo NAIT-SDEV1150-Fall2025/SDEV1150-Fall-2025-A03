@@ -19,6 +19,11 @@ if (x % 2 === 0) {
 }
 
 // 3. Nested if-else
+// else if just allows you to check for multiple conditions
+
+// to demonstrate how this code works we're going to use
+// the debugger to step through the code.
+
 if (x > 10) {
   console.log(`x is greater ten`);
 } else if (x > 5) {
