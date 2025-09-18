@@ -24,7 +24,8 @@ if (x % 2 === 0) {
 // to demonstrate how this code works we're going to use
 // the "debugger" to step through the code.
 // to use the debugger you just write debugger; on an new line
-debugger;
+// you can uncomment the line below to step through the debugger
+// debugger;
 if (x > 10) {
   console.log(`x is greater ten`);
 } else if (x > 5) {
@@ -34,8 +35,6 @@ if (x > 10) {
 } else  {
   console.log(`x is zero or negative`);
 }
-
-
 
 // 4. while loop
 // 5. do-while loop
