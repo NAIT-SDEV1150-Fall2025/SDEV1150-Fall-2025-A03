@@ -22,8 +22,9 @@ if (x % 2 === 0) {
 // else if just allows you to check for multiple conditions
 
 // to demonstrate how this code works we're going to use
-// the debugger to step through the code.
-
+// the "debugger" to step through the code.
+// to use the debugger you just write debugger; on an new line
+debugger;
 if (x > 10) {
   console.log(`x is greater ten`);
 } else if (x > 5) {
