@@ -40,7 +40,7 @@ if (x > 10) {
 let count = 0;
 
 // let's take a look at how this loop works with the debugger.
-debugger;
+// debugger;
 // so for the block to execute
 while (count < 5) {
   console.log(`the count current is ${count}`);
@@ -50,10 +50,33 @@ while (count < 5) {
 
 
 // 5. do-while loop
+// the only difference between these loops is that while has the possibility
+// that it will never execute, if the condition is false.
+// In a do while loop it will always execute once, it also executes the condition after the block.
+let z = 0;
+
+console.log("the do while loops")
+do {
+  console.log(`z is ${z}`);
+  // for this condition you need make condition false at some point
+  z++; // this equivalent to z = z + 1;
+} while (z < 0); // the condition is false but the block is executed at least once.
+
+
 // 6. for loop
+// a for loop has three parts
+// first: let j = 0; this is the variable that will be iterator.
+// second: j < 3; this is going to the condition
+// thidd: j = j + 1 (or j++) this is going to be how much it increases by.
+for (let j = 0; j < 3; j = j + 1) {
+  console.log(`j is ${j}`);
+}
 
 // Student TODO:
 // 7. Snippet with bugs for debugging practice
+
+
+
 // Snippet with bugs for debugging practice - uncomment when ready
 /*
 const num = 10;
