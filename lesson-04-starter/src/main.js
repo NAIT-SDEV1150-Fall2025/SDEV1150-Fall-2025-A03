@@ -4,7 +4,7 @@ console.log('Lesson 04 starter loaded');
 // 1. Simple if
 // this is a way to control the flow of your code.
 const x = 5;
-if (x > 0) {
+if (x > 0) { // the x > 0 needs to be true for the below to pass.
   console.log(`x is ${x} which is positive`);
 }
 // 2. if-else
@@ -37,6 +37,18 @@ if (x > 10) {
 }
 
 // 4. while loop
+let count = 0;
+
+// let's take a look at how this loop works with the debugger.
+debugger;
+// so for the block to execute
+while (count < 5) {
+  console.log(`the count current is ${count}`);
+  // is it increases the count by 1 every time
+  count = count + 1;
+}
+
+
 // 5. do-while loop
 // 6. for loop
 
