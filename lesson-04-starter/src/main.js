@@ -68,6 +68,8 @@ do {
 // first: let j = 0; this is the variable that will be iterator.
 // second: j < 3; this is going to the condition
 // thidd: j = j + 1 (or j++) this is going to be how much it increases by.
+console.log("for loops")
+// debugger;
 for (let j = 0; j < 3; j = j + 1) {
   console.log(`j is ${j}`);
 }
