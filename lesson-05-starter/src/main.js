@@ -78,6 +78,13 @@ function updateHTML(selector, html) {
 
 function setAttr(selector, name, value) {
   // try to figure it out.
+  const el = document.querySelector(selector); // we're using the selector argument
+  if (!el) { // if there's no element selected
+    console.warn(`No element selected with "${selector}"`);
+    return; // end the function if it hits this line it exits
+  }
+  // we're going to use the same concept as above.
+  el.setAttribute(name, value);
 }
 
 // 5. Use helpers to perform simple tasks
