@@ -87,6 +87,18 @@ function setAttr(selector, name, value) {
   el.setAttribute(name, value);
 }
 
+function setStyle(selector, styleObj = {}) {
+  const el = document.querySelector(selector); // we're using the selector argument
+  if (!el) { // if there's no element selected
+    console.warn(`No element selected with "${selector}"`);
+    return; // end the function if it hits this line it exits
+  }
+  // we're going to loop through the entries in the object
+  Object.entries(styleObj).forEach(([k, v]) => {
+    el.style[k] = v;
+  });
+}
+
 // 5. Use helpers to perform simple tasks
 // update text only updates the text.
 updateText('h2', 'The Ultimate List (js modified)');
@@ -101,6 +113,11 @@ updateHTML('#dynamic-box', `
 
 setAttr('#hero-img', 'title', 'the hover title from js');
 
+// our setstyle requires an object
+setStyle('#hero-img', {
+  borderColor: '#ababfa',
+  borderWidth: '5px',
+});
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
