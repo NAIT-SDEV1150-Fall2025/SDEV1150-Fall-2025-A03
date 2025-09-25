@@ -45,6 +45,13 @@ dynamicBox.innerHTML = `
 // textContent.
 
 // 3. Attributes & styles
+// is we're going to modify the alt of the image.
+heroImg.setAttribute('alt', 'A sample image');
+
+// let's add a border to the image
+heroImg.style.borderColor = 'green';
+// this is going to apply the "border-color" property of the
+// elements' css.
 
 // 4. Create small helper functions for reuse
 
