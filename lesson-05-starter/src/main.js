@@ -76,6 +76,10 @@ function updateHTML(selector, html) {
   el.innerHTML = html;
 }
 
+function setAttr(selector, name, value) {
+  // try to figure it out.
+}
+
 // 5. Use helpers to perform simple tasks
 // update text only updates the text.
 updateText('h2', 'The Ultimate List (js modified)');
@@ -87,6 +91,8 @@ updateHTML('#dynamic-box', `
     Note that we can put <em>any type of html in here</em>
   </p>
 `);
+
+setAttr('#hero-img', 'title', 'the hover title from js');
 
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
