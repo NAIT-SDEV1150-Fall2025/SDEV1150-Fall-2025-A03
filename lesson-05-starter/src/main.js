@@ -64,8 +64,30 @@ function updateText(selector, text) {
   // we're going to update the element
   el.textContent = text; // we're using the text argument
 }
+
+function updateHTML(selector, html) {
+  // I'm going to select the element and check that it exists
+  const el = document.querySelector(selector); // we're using the selector argument
+  if (!el) { // if there's no element selected
+    console.warn(`No element selected with "${selector}"`);
+    return; // end the function if it hits this line it exits
+  }
+  // we're going to update the html of the element selected
+  el.innerHTML = html;
+}
+
 // 5. Use helpers to perform simple tasks
+// update text only updates the text.
 updateText('h2', 'The Ultimate List (js modified)');
+
+// use our updateHTML
+updateHTML('#dynamic-box', `
+  <p class="desc">
+    Again we've modified with our <code>updateHTML(...)</code> function<br/>
+    Note that we can put <em>any type of html in here</em>
+  </p>
+`);
+
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
