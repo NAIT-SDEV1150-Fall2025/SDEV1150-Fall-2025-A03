@@ -14,10 +14,14 @@ const titleEl = document.querySelector('#page-title');
 // Note: for selecting class using the querySelector you need to but
 // a . in front of the classname
 const taglineEl = document.querySelector('.tagline');
+const heroImg = document.querySelector('#hero-img');
+const heroCaption = document.querySelector('#hero-caption');
 
 console.log('Selected Elements', {
   titleEl,
   taglineEl,
+  heroImg,
+  heroCaption,
 });
 
 // 2. textContent vs innerHTML
