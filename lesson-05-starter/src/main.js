@@ -29,6 +29,20 @@ console.log('Selected Elements', {
 });
 
 // 2. textContent vs innerHTML
+// textContent we're making it so that you modify only the text
+// and not the html of an element
+titleEl.textContent = 'Modified in JS';
+
+// in innerHTML you can modify the tags inside the element
+
+dynamicBox.innerHTML = `
+  <p class="desc">
+    We injected html using the <em>innerHTML property</em>. <br/>
+    It can include <strong>HTML Markup</strong>.
+  </p>
+`;
+// you can see the differences above if you change the innerHTML to
+// textContent.
 
 // 3. Attributes & styles
 
