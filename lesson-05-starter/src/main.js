@@ -11,9 +11,13 @@ I want you folks to select the following elements
 // Note: when using the querySelector to select an ID you put
 // a # in front of it. **IMPORTANT**
 const titleEl = document.querySelector('#page-title');
+// Note: for selecting class using the querySelector you need to but
+// a . in front of the classname
+const taglineEl = document.querySelector('.tagline');
 
 console.log('Selected Elements', {
   titleEl,
+  taglineEl,
 });
 
 // 2. textContent vs innerHTML
