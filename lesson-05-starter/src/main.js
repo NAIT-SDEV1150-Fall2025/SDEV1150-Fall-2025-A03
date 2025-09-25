@@ -54,6 +54,7 @@ heroImg.style.borderColor = 'green';
 // elements' css.
 
 // 4. Create small helper functions for reuse
+// you can use these in your assignment.
 function updateText(selector, text) {
   // I'm going to select the element and check that it exists
   const el = document.querySelector(selector); // we're using the selector argument
