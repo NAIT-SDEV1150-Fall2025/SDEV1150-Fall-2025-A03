@@ -19,7 +19,6 @@ const heroCaption = document.querySelector('#hero-caption');
 const dynamicBox = document.querySelector('#dynamic-box');
 const footerNote = document.querySelector('#footer-note');
 
-
 console.log('Selected Elements', {
   titleEl,
   taglineEl,
