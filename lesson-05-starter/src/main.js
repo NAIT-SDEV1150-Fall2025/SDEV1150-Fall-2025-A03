@@ -1,6 +1,20 @@
 console.log('Lesson 03 starter loaded');
 
-// 1. Selecting elements
+// 1. Selecting element
+/*
+I want you folks to select the following elements
+- element with id of page-title
+- element with class tagline
+- element with id hero-img
+- element with id hero-caption
+*/
+// Note: when using the querySelector to select an ID you put
+// a # in front of it. **IMPORTANT**
+const titleEl = document.querySelector('#page-title');
+
+console.log('Selected Elements', {
+  titleEl,
+});
 
 // 2. textContent vs innerHTML
 
