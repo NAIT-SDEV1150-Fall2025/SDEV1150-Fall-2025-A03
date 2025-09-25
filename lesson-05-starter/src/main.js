@@ -54,9 +54,18 @@ heroImg.style.borderColor = 'green';
 // elements' css.
 
 // 4. Create small helper functions for reuse
-
+function updateText(selector, text) {
+  // I'm going to select the element and check that it exists
+  const el = document.querySelector(selector); // we're using the selector argument
+  if (!el) { // if there's no element selected
+    console.warn(`No element selected with "${selector}"`);
+    return; // end the function if it hits this line it exits
+  }
+  // we're going to update the element
+  el.textContent = text; // we're using the text argument
+}
 // 5. Use helpers to perform simple tasks
-
+updateText('h2', 'The Ultimate List (js modified)');
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
