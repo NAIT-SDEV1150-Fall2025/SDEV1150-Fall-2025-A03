@@ -119,8 +119,20 @@ setStyle('#hero-img', {
   borderColor: '#ababfa',
   borderWidth: '5px',
 });
+
 // 6. Footer text tweak (demonstrate class toggle & style change)
+// there's one property that we've seen on an html element called
+// class, this is special because you're going to be adding styles in
+// this way by adding and removing classes with .classList
+console.log(footerNote.classList);
+// we can add a class here with classList.add
+footerNote.classList.add('footer-strong');
 
 // Require innerHTML here to render the &copy; entity correctly
+footerNote.innerHTML = `&copy; 2025 Front End Fundamentals`;
 
 // 7. Null-safety tip: check selections before using them
+const testElement = document.querySelector('nothing');
+if (!testElement) { // if you have a bad css selector, it will return nothing.
+  console.warn('Selector "nothing" does not exist');
+}

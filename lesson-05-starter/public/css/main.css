@@ -58,6 +58,7 @@ header {
   padding: 0.25rem 0.5rem;
 }
 
+/* we can apply this class using classList */
 .footer-strong {
   color: var(--accent);
   font-weight: 700;
