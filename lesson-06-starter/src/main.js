@@ -47,6 +47,9 @@ features.forEach((featureItem, index) => { // this is a function.
 // you can select with element.firstElementChild
 console.log('element to remove');
 console.log(featureList.firstElementChild);
+// let's remove it
+featureList.removeChild(featureList.firstElementChild);
+// note you can also do featureList.firstElementChild.remove();
 
 
 // 7. Update the second item using nextElementSibling
