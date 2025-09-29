@@ -23,11 +23,12 @@ const li = document.createElement('li'); // li is going to be the type element
 li.textContent = 'Flexibility';
 // add a class of "feature" on the element
 li.classList.add('feature'); // you can also use li.className = 'feature';
-console.log(li);
 // I want you to append it to the page.
-
+// attach the element as a child to the list selected above.
+featureList.appendChild(li); // you can also do featureList.append(li);
 
 // 4. Add a new item dynamically
+
 
 // 5. Retreive all list items (querySelectorAll) and update their text
 
