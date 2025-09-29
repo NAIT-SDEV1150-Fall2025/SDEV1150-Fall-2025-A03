@@ -17,6 +17,11 @@ console.log('Selected elements:', {
 });
 
 // 3. Modify list content
+// create an element
+// add text content to that elment
+// add a class of "feature" on the element
+// I want you to append it to the page.
+
 
 // 4. Add a new item dynamically
 
