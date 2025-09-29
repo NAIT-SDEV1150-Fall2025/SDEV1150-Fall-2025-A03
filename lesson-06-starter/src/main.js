@@ -18,8 +18,12 @@ console.log('Selected elements:', {
 
 // 3. Modify list content
 // create an element
+const li = document.createElement('li'); // li is going to be the type element
 // add text content to that elment
+li.textContent = 'Flexibility';
 // add a class of "feature" on the element
+li.classList.add('feature'); // you can also use li.className = 'feature';
+console.log(li);
 // I want you to append it to the page.
 
 
