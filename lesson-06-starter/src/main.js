@@ -30,7 +30,15 @@ featureList.appendChild(li); // you can also do featureList.append(li);
 // 4. Add a new item dynamically
 // use querySelector all to select all of the items in that list
 const features = document.querySelectorAll('.feature');
-console.log(features);
+// this is a NodeList which behaves very similary to an array.
+// we'll take a deeper look at this later.
+debugger; // we're going to have to "step" into the function.
+features.forEach((featureItem, index) => { // this is a function.
+  // this function will get executed for each element in the nodelist
+  // we can dynamically add content
+  featureItem.textContent = `item ${index + 1}: ${featureItem.textContent}`;
+
+});
 
 // 5. Retreive all list items (querySelectorAll) and update their text
 
