@@ -9,6 +9,7 @@ const dynamicBox = document.querySelector('#dynamic-box');
 const footerNote = document.querySelector('#footer-note');
 
 // 1. Create a new variable for the feature list element
+const featureList = document.querySelector('#feature-list');
 
 // 2. Add feature list to the displayed elements below
 console.log('Selected elements:', {
