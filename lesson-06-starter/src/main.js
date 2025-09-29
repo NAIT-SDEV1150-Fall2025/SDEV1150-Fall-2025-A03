@@ -28,7 +28,9 @@ li.classList.add('feature'); // you can also use li.className = 'feature';
 featureList.appendChild(li); // you can also do featureList.append(li);
 
 // 4. Add a new item dynamically
-
+// use querySelector all to select all of the items in that list
+const features = document.querySelectorAll('.feature');
+console.log(features);
 
 // 5. Retreive all list items (querySelectorAll) and update their text
 
