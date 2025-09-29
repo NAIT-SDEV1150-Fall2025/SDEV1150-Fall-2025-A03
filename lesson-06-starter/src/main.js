@@ -43,6 +43,11 @@ features.forEach((featureItem, index) => { // this is a function.
 });
 
 // 6. Removing the first item from the list using DOM relationships to find it
+// we're going to see that the first element from the list as a child
+// you can select with element.firstElementChild
+console.log('element to remove');
+console.log(featureList.firstElementChild);
+
 
 // 7. Update the second item using nextElementSibling
 
