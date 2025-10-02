@@ -28,7 +28,7 @@ li.textContent = 'Flexibility';
 const span = document.createElement('span');
 span.textContent = ` text in span!`;
 
-console.log(span);
+// console.log(span);
 // let's attach it in the li
 li.appendChild(span);
 // note this span will get removed by the loop later on.
@@ -55,17 +55,34 @@ features.forEach((featureItem, index) => { // this is a function.
 // 6. Removing the first item from the list using DOM relationships to find it
 // we're going to see that the first element from the list as a child
 // you can select with element.firstElementChild
-console.log('element to remove');
-console.log(featureList.firstElementChild);
+// console.log('element to remove');
+// console.log(featureList.firstElementChild);
 // let's remove it
 featureList.removeChild(featureList.firstElementChild);
 // note you can also do featureList.firstElementChild.remove();
 
 // 7. Update the second item using nextElementSibling
+console.log(featureList.firstElementChild);
+const nextSibling = featureList.firstElementChild.nextElementSibling;
+nextSibling.textContent += ' (updated)';
 
 // 8. Move the last item to the front of the list
+const firstElement = featureList.firstElementChild;
+const lastElement = featureList.lastElementChild;
+// we're going to use insert before to reorder
+featureList.insertBefore(
+  lastElement,
+  firstElement,
+);
 
 // 9. Use a timer to add a new item after 3 seconds have passed
+const THREE_SECONDS = 3000; // note 3000 milliseconds.
+
+// settimeout executes after a few seconds
+setTimeout(()=> {
+
+}, THREE_SECONDS);
+
 
 // **** THE FOLLOWING IS EXISTING CODE FROM LESSON 05
 
