@@ -51,7 +51,6 @@ console.log(featureList.firstElementChild);
 featureList.removeChild(featureList.firstElementChild);
 // note you can also do featureList.firstElementChild.remove();
 
-
 // 7. Update the second item using nextElementSibling
 
 // 8. Move the last item to the front of the list
