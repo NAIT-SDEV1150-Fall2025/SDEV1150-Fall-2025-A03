@@ -79,10 +79,13 @@ featureList.insertBefore(
 const THREE_SECONDS = 3000; // note 3000 milliseconds.
 
 // settimeout executes after a few seconds
-setTimeout(()=> {
-
+// takes two arguments first is the function, second is the TIME in ms
+setTimeout(() => { // if you want to see it continous add change to setInterval
+  const li = document.createElement('li');
+  li.textContent = 'Added after 3 seconds';
+  li.classList.add('feature');
+  featureList.appendChild(li);
 }, THREE_SECONDS);
-
 
 // **** THE FOLLOWING IS EXISTING CODE FROM LESSON 05
 
