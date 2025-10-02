@@ -23,6 +23,16 @@ console.log('Selected elements:', {
 const li = document.createElement('li'); // li is going to be the type element
 // add text content to that elment
 li.textContent = 'Flexibility';
+
+// so can you add a node within a node
+const span = document.createElement('span');
+span.textContent = ` text in span!`;
+
+console.log(span);
+// let's attach it in the li
+li.appendChild(span);
+// note this span will get removed by the loop later on.
+
 // add a class of "feature" on the element
 li.classList.add('feature'); // you can also use li.className = 'feature';
 // I want you to append it to the page.
