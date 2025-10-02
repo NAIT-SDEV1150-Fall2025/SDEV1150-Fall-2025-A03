@@ -28,6 +28,12 @@ window.addEventListener('DOMContentLoaded', () => {
   console.log({ btnToggle, btnMessage, message, hoverCard, hoverStatus, keyOutput, list, selection });
 
   // 3. click: toggle a highlight class on the body
+  // the click event is listening to mouse clicks on the browser
+  // we're connecting this to the btnToggle selection
+  btnToggle.addEventListener('click', () => {
+
+  });
+
 
   // 4. click: change message textContent (no HTML parsing)
 
