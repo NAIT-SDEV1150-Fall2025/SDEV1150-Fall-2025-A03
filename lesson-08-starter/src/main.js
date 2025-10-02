@@ -31,9 +31,21 @@ window.addEventListener('DOMContentLoaded', () => {
   // the click event is listening to mouse clicks on the browser
   // we're connecting this to the btnToggle selection
   btnToggle.addEventListener('click', () => {
+    console.log('btn toggle clicked!');
+    // add the class to the body
+    // classList.toggle adds and removes the highlight class below
+    document.body.classList.toggle('highlight');
+    // update the text of the button check if it's highlighted
+    // and update the text accordingly.
+    // do this with classList.contains (which returns a boolean)
+    const on = document.body.classList.contains('highlight');
 
+    if (on) { // also write if (on === true) { ... }
+      btnToggle.textContent = 'Highlight is: ON';
+    } else {
+      btnToggle.textContent = 'Highlight is: OFF';
+    }
   });
-
 
   // 4. click: change message textContent (no HTML parsing)
 
