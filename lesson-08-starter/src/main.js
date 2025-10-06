@@ -86,6 +86,14 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log(event.target.tagName);
     // below we're going to check to see if
     if (event.target.tagName == 'LI') {
+      // we want one to be selected.
+      // i can select all of the li with an active class
+      const activeListItems = document.querySelectorAll('li.active');
+      // loop through all of them and remove the class.
+      activeListItems.forEach((element) => {
+        // remove the class
+        element.classList.remove('active');
+      });
       // an li is the event.target
       const li = event.target;
       // add the class "active" to the li
