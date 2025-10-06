@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // let's take a look at the event.target
     console.log(event.target);
     // take a look at the event.target.tagName
-    console.log(event.target.tagName);
+    console.log(event.target.tagName.toLowerCase());
     // below we're going to check to see if
     if (event.target.tagName == 'LI') {
       // we want one to be selected.
@@ -98,6 +98,11 @@ window.addEventListener('DOMContentLoaded', () => {
       const li = event.target;
       // add the class "active" to the li
       li.classList.add('active');
+
+      // get the attribute data-id from the li and I want you to update
+      // the selection element
+      const dataId = li.getAttribute('data-id');
+      selection.textContent = `Selected: Item ${dataId}`;
     }
   });
 });
