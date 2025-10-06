@@ -61,6 +61,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // change the text of the status
     hoverStatus.textContent = 'Status: HOVERING';
   });
+  // do the mouseout!
+  hoverCard.addEventListener('mouseout', () => {
+    hoverStatus.textContent = 'Status: NOT HOVERING';
+  });
 
   // 6. keydown: show last key pressed (global listener)
 
