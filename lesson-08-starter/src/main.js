@@ -67,6 +67,12 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. keydown: show last key pressed (global listener)
+  // in the above we've been putting event listeners on elements but you can also
+  // put them on the page, by attaching to the document.
+  document.addEventListener('keydown', (event) => {
+    // the event object is something that js passes in to give you more info the event
+    console.log(event);
+  });
 
   // 7. Event delegation: one listener on the <ul> for all <li> elements
 });
