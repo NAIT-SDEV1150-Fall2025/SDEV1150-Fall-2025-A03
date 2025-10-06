@@ -48,6 +48,12 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // 4. click: change message textContent (no HTML parsing)
+  btnMessage.addEventListener('click', () => { // equivalent to function () { /* ... */ }
+    // below js needs to have the ' in the string escaped! that just means
+    // that js understands that it's not the end of the string, you can do this
+    // with \ in front of the \
+    message.textContent = 'Danny boy I don\'t want to answer your questions';
+  });
 
   // 5. mouseover / mouseout: display hover status on the card
 
