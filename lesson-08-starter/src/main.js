@@ -56,6 +56,11 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // 5. mouseover / mouseout: display hover status on the card
+  // this will trigger when the mouse is over the hovercard.
+  hoverCard.addEventListener('mouseover', () => {
+    // change the text of the status
+    hoverStatus.textContent = 'Status: HOVERING';
+  });
 
   // 6. keydown: show last key pressed (global listener)
 
