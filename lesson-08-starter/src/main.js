@@ -79,4 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // 7. Event delegation: one listener on the <ul> for all <li> elements
+  list.addEventListener('click', (event) => {
+    // let's take a look at the event.target
+    console.log(event.target);
+  });
 });
