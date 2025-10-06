@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let fullText = '';
   document.addEventListener('keydown', (event) => {
     // the event object is something that js passes in to give you more info the event
-    console.log(event); // take a look at all of the attributes.
+    // console.log(event); // take a look at all of the attributes.
     // we can access the key by using event.key
     fullText += event.key;
     keyOutput.textContent = `Last key: ${event.key}, full string: ${fullText}`;
@@ -82,5 +82,14 @@ window.addEventListener('DOMContentLoaded', () => {
   list.addEventListener('click', (event) => {
     // let's take a look at the event.target
     console.log(event.target);
+    // take a look at the event.target.tagName
+    console.log(event.target.tagName);
+    // below we're going to check to see if
+    if (event.target.tagName == 'LI') {
+      // an li is the event.target
+      const li = event.target;
+      // add the class "active" to the li
+      li.classList.add('active');
+    }
   });
 });
