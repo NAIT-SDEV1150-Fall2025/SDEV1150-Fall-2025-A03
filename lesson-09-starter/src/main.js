@@ -12,6 +12,13 @@ const log = document.getElementById('log');
 // 2. Add event listeners
 
 // 2.1 Outer div - using a named function
+// you can create a function and register that function with the event listener
+function outerClick() {
+  log.textContent = 'Outer click (captured) |';
+}
+// this is something special called pass by reference
+// where you're allowing javascript to call this function for you
+outer.addEventListener('click', outerClick);
 
 // 2.2 Inner div - using an anonymous function
 
