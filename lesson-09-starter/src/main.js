@@ -54,8 +54,14 @@ thumbnails.addEventListener('click', (event) => {
   // console.log the event.target (remember this is the most speficic element)
   console.log(event.target); // if click an img tag it'll return the specific img tag.
   // also console.log the event.target.tagName which is the HTML name (in all caps)
+  console.log(event.target.tagName); // the type of element that it is.
+  // I'm going to check to see if tagName is an image
+  if (event.target.tagName === 'IMG') {
+    // if the tagName is src i want you to console.log the attribute (remember getAttribute of src)
+    let imagePath = event.target.getAttribute('src');
+    console.log('imagePath', imagePath);
+  }
 });
-// if the tagName is src i want you to console.log the attribute (remember getAttribute of src)
 // do this over the break
 
 // 2.1 Thumbnails container - using an arrow function
