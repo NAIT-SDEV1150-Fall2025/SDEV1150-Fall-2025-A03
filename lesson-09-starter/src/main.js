@@ -3,6 +3,11 @@ console.log('Lesson 10 starter loaded');
 // ============== Propagation demo
 
 // 1. Select required elements
+const outer = document.getElementById('outer');
+const inner = document.getElementById('inner');
+// a slight reminder that javascript uses camel casing
+const btnPropagate = document.getElementById('btn-propagate');
+const log = document.getElementById('log');
 
 // 2. Add event listeners
 
