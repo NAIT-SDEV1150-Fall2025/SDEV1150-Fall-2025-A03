@@ -38,6 +38,8 @@ btnPropagate.addEventListener('click', (event) => { // we're going to need the e
   event.stopPropagation();
   log.textContent += 'Button click (captured) |';
 });
+// note: you're not going to come into this often but it is handy when you need it
+// most times you can think stop propagation as a default.
 
 // ============== Gallery demo
 
