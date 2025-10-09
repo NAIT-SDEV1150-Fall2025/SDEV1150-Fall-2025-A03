@@ -30,6 +30,14 @@ inner.addEventListener('click', () => { // an anonymous function/callback
 // and this is where we use stop propagation.
 
 // 2.3 Button - using an arrow function
+// let's make an event listener that only triggers the button event listener
+// and does not bubble up.
+btnPropagate.addEventListener('click', (event) => { // we're going to need the event object
+  // we'll talk some more about event object
+  // it's got a some methods on it stopProgation (do that) and preventDefault (look at next lesson)
+  event.stopPropagation();
+  log.textContent += 'Button click (captured) |';
+});
 
 // ============== Gallery demo
 
