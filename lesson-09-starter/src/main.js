@@ -49,6 +49,9 @@ const viewer = document.querySelector('.viewer');
 const mainImage = document.querySelector('#main-image');
 
 // 2. Add event listeners
+
+// 2.1 Thumbnails container - using an arrow function
+
 // I want you folks to add an event listener on the list
 // pass in the event object to the function (as seen before)
 thumbnails.addEventListener('click', (event) => {
@@ -69,8 +72,6 @@ thumbnails.addEventListener('click', (event) => {
   }
 });
 // do this over the break
-
-// 2.1 Thumbnails container - using an arrow function
 
 // 2.2 Close button - using an arrow function
 
