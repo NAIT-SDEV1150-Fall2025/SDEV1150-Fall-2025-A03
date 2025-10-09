@@ -46,6 +46,7 @@ btnPropagate.addEventListener('click', (event) => { // we're going to need the e
 // 1. Select required elements
 const thumbnails = document.querySelector('.thumbnails');
 const viewer = document.querySelector('.viewer');
+const mainImage = document.querySelector('#main-image');
 
 // 2. Add event listeners
 // I want you folks to add an event listener on the list
@@ -60,6 +61,11 @@ thumbnails.addEventListener('click', (event) => {
     // if the tagName is src i want you to console.log the attribute (remember getAttribute of src)
     let imagePath = event.target.getAttribute('src');
     console.log('imagePath', imagePath);
+    // we're going to do two things
+    // First: show the viewer by adding the "show" class
+    viewer.classList.add('show');
+    // Second: we're going set the attribute of the main image
+    mainImage.setAttribute('src', imagePath);
   }
 });
 // do this over the break
