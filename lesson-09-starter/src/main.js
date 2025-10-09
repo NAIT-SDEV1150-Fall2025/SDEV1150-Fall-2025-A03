@@ -44,12 +44,17 @@ btnPropagate.addEventListener('click', (event) => { // we're going to need the e
 // ============== Gallery demo
 
 // 1. Select required elements
+const thumbnails = document.querySelector('.thumbnails');
+const viewer = document.querySelector('.viewer');
 
 // 2. Add event listeners
 // I want you folks to add an event listener on the list
 // pass in the event object to the function (as seen before)
-// console.log the event.target (remember this is the most speficic element)
-// also console.log the event.target.tagName which is the HTML name (in all caps)
+thumbnails.addEventListener('click', (event) => {
+  // console.log the event.target (remember this is the most speficic element)
+  console.log(event.target); // if click an img tag it'll return the specific img tag.
+  // also console.log the event.target.tagName which is the HTML name (in all caps)
+});
 // if the tagName is src i want you to console.log the attribute (remember getAttribute of src)
 // do this over the break
 
