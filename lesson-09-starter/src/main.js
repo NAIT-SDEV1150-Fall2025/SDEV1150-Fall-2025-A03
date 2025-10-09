@@ -23,8 +23,11 @@ outer.addEventListener('click', outerClick);
 // 2.2 Inner div - using an anonymous function
 // remember that if you click the inner div you're also clicking the outer div
 inner.addEventListener('click', () => { // an anonymous function/callback
+  // note below we're adding to the existing textContent (using +=)
   log.textContent += 'Inner click (captured) |';
 });
+// bubbling can lead to some weird side effects that might not be wanted.
+// and this is where we use stop propagation.
 
 // 2.3 Button - using an arrow function
 
