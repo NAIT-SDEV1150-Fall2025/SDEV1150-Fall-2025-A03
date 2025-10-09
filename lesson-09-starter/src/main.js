@@ -86,3 +86,12 @@ closeButton.addEventListener('click', () => {
 
 // Student TODO: Add event listener to document, which closes
 // the viewer when the Escape key is pressed
+// note you'll need the "key" attribute on the event object.
+document.addEventListener('keydown', (event) => {
+  console.log(event.key); // this is going to show the key.
+  // we're going to check to see if the key is escaped here
+  if (event.key === 'Escape') {
+    // we're going remove the class of show if it you clicked it.
+    viewer.classList.remove('show');
+  }
+});
