@@ -14,13 +14,17 @@ const log = document.getElementById('log');
 // 2.1 Outer div - using a named function
 // you can create a function and register that function with the event listener
 function outerClick() {
-  log.textContent = 'Outer click (captured) |';
+  log.textContent += 'Outer click (captured) |';
 }
 // this is something special called pass by reference
 // where you're allowing javascript to call this function for you
 outer.addEventListener('click', outerClick);
 
 // 2.2 Inner div - using an anonymous function
+// remember that if you click the inner div you're also clicking the outer div
+inner.addEventListener('click', () => { // an anonymous function/callback
+  log.textContent += 'Inner click (captured) |';
+});
 
 // 2.3 Button - using an arrow function
 
