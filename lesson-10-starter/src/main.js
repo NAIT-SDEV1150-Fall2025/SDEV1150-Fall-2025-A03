@@ -105,7 +105,13 @@ form.addEventListener('submit', (event) => {
   // three minutes: I want you to add all of the data
   // from the user in the result element so it's visible
   // to the user.
+  result.textContent = `Submission Received:
+    - name: ${data.fullName}
+    - email: ${data.email}
+    - bio: ${data.bio}
+    - plan: ${data.plan}
 
+  `;
 });
 
 // Use 'submit' event on the form, not 'click' on the button
