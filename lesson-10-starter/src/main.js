@@ -48,6 +48,8 @@ function serializeData(formElement) {
   console.log(`plan is ${plan.value}`);
 
   // return an object of all over the values
+  // a way to return multiple values from the
+  // object itself.
   return {
     fullName: fullName.value,
     email: email.value,
@@ -69,7 +71,11 @@ form.addEventListener('submit', (event) => {
   // we're going to get the data from the form.
   const data = serializeData(form);
   // we're going to access and use those items.
-  console.log(data)
+
+  console.log(`data.fullName is ${data.fullName}`);
+  console.log(`data.email is ${data.email}`);
+  console.log(`data.bio is ${data.bio}`);
+  console.log(`data.plan is ${data.plan}`);
 });
 
 // Use 'submit' event on the form, not 'click' on the button
