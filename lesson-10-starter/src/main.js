@@ -24,9 +24,11 @@ function serializeData(formElement) {
   // let's do email first
   let email = formElement.elements.email;
   console.log(`email is: ${email.value}`);
-
+  // bio.
   let bio = formElement.elements.bio;
   console.log(`bio is: ${bio.value}`);
+
+  // at the we're going to return everything in an object.
 }
 
 // Access values using both form.elements and query selectors
