@@ -54,10 +54,12 @@ function serializeData(formElement) {
   // selector and you're just trust we're going to select
   // all inputs with name checkbox that are checked
   // and convert it to an array.
-  let checkedTopics = Array.from(document.querySelectorAll(
-    'input[name="topics"]:checked',
-  ));
-  console.log(checkedTopics);
+  let checkedTopics = Array.from(
+    document.querySelectorAll('input[name="topics"]:checked'),
+  );
+  // 2. we're going to use something called map which
+  // behaves like a foreach but returns a modified array
+  // without editing the original array you're looping over.
 
 
   // return an object of all over the values
@@ -85,10 +87,10 @@ form.addEventListener('submit', (event) => {
   const data = serializeData(form);
   // we're going to access and use those items.
 
-  console.log(`data.fullName is ${data.fullName}`);
-  console.log(`data.email is ${data.email}`);
-  console.log(`data.bio is ${data.bio}`);
-  console.log(`data.plan is ${data.plan}`);
+  // console.log(`data.fullName is ${data.fullName}`);
+  // console.log(`data.email is ${data.email}`);
+  // console.log(`data.bio is ${data.bio}`);
+  // console.log(`data.plan is ${data.plan}`);
 });
 
 // Use 'submit' event on the form, not 'click' on the button
