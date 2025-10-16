@@ -7,15 +7,19 @@ const result = document.querySelector('#result');
 // 2. Function to gather and structure form data
 function serializeData(formElement) {
   // let's take a look at all of the form elements
-  console.log(formElement.elements);
+  // console.log(formElement.elements);
   // below we're going to access the elements and
   // get the values from the inputs so we can use
   // them in our application.
   // let's focus on text based inputs first.
   let fullName = formElement.elements.fullName;
+  // for formElement.elements.fullName, "fullName"
+  // is the "name" attribute on the input.
   // if you want to see what the user entered into
   // the input element you use .value on the inpu.
+  console.log(fullName); // the same thing that you would get from a query selector.
   console.log(`Fullname value is: ${fullName.value}`);
+
 }
 
 // Access values using both form.elements and query selectors
