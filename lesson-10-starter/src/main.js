@@ -12,7 +12,7 @@ function serializeData(formElement) {
   // get the values from the inputs so we can use
   // them in our application.
   // let's focus on text based inputs first.
-  // let fullName = formElement.elements.fullName;
+  let fullName = formElement.elements.fullName;
 
   // for formElement.elements.fullName, "fullName"
   // is the "name" attribute on the input.
@@ -23,10 +23,10 @@ function serializeData(formElement) {
 
   // get the email and the bio print it out to the console.
   // let's do email first
-  // let email = formElement.elements.email;
+  let email = formElement.elements.email;
   // console.log(`email is: ${email.value}`);
   // bio.
-  // let bio = formElement.elements.bio;
+  let bio = formElement.elements.bio;
   // console.log(`bio is: ${bio.value}`);
 
   // at the we're going to return everything in an object.
@@ -34,7 +34,7 @@ function serializeData(formElement) {
   // we can create variables based on the name using
   // the following technique you don't need to use this
   // if it's confusing just the above.
-  let { fullName, bio, email } = formElement.elements;
+  // let { fullName, bio, email } = formElement.elements;
   // creating three variables at once
   // console.log(`Fullname value is: ${fullName.value}`);
   // console.log(`email is: ${email.value}`);
@@ -92,6 +92,7 @@ form.addEventListener('submit', (event) => {
   // so that we can prevent the form from submitting
   // to the server.
   event.preventDefault();
+  // this line is required on all forms.
 
   // we're going to get the data from the form.
   const data = serializeData(form);
