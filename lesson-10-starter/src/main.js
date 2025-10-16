@@ -122,6 +122,8 @@ form.addEventListener('submit', (event) => {
 // 4. Handle form reset - reset the result area text when the form is reset
 // 3 mins.
 // on the form listent to the 'reset' event
-// I want you to set the textContent of the result to
-// "awaiting submission."
-
+form.addEventListener('reset', () => {
+  // I want you to set the textContent of the result to
+  // "awaiting submission."
+  result.textContent = `Awaiting submission...`;
+});
