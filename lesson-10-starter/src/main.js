@@ -17,12 +17,13 @@ function serializeData(formElement) {
   // is the "name" attribute on the input.
   // if you want to see what the user entered into
   // the input element you use .value on the inpu.
-  console.log(fullName); // the same thing that you would get from a query selector.
+  // console.log(fullName); // the same thing that you would get from a query selector.
   console.log(`Fullname value is: ${fullName.value}`);
 
   // get the email and the bio print it out to the console.
-
-
+  // let's do email first
+  let email = formElement.elements.email;
+  console.log(`email is: ${email.value}`);
 }
 
 // Access values using both form.elements and query selectors
