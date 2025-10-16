@@ -10,7 +10,14 @@ const result = document.querySelector('#result');
 
 // 3. Handle form submission
 
+form.addEventListener('submit', (event) => {
+  // you need to have the event object passed in
+  // so that we can prevent the form from submitting
+  // to the server.
+  event.preventDefault();
 
+  console.log('form submitted');
+});
 
 // Use 'submit' event on the form, not 'click' on the button
 // Prevent default behavior (navigation/reload) using event.preventDefault()
