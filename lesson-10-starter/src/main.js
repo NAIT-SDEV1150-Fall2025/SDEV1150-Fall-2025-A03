@@ -66,10 +66,10 @@ function serializeData(formElement) {
     // and we're just going to return the value of the checked item
     return topicElement.value;
   });
-  console.log(`We've converted our list of checked elements`);
-  console.log(checkedTopics);
-  console.log(`into just the values of those elements`);
-  console.log(topics);
+  // console.log(`We've converted our list of checked elements`);
+  // console.log(checkedTopics);
+  // console.log(`into just the values of those elements`);
+  // console.log(topics);
 
   // return an object of all over the values
   // a way to return multiple values from the
@@ -96,11 +96,16 @@ form.addEventListener('submit', (event) => {
   // we're going to get the data from the form.
   const data = serializeData(form);
   // we're going to access and use those items.
-
+  console.log(data)
   // console.log(`data.fullName is ${data.fullName}`);
   // console.log(`data.email is ${data.email}`);
   // console.log(`data.bio is ${data.bio}`);
   // console.log(`data.plan is ${data.plan}`);
+
+  // three minutes: I want you to add all of the data
+  // from the user in the result element so it's visible
+  // to the user.
+
 });
 
 // Use 'submit' event on the form, not 'click' on the button
