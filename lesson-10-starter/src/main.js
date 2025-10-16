@@ -96,7 +96,9 @@ form.addEventListener('submit', (event) => {
   // we're going to get the data from the form.
   const data = serializeData(form);
   // we're going to access and use those items.
-  console.log(data)
+  console.log(data);
+  // the keys need to be the exact same as the keys returned
+  // from the function just as a note.
   // console.log(`data.fullName is ${data.fullName}`);
   // console.log(`data.email is ${data.email}`);
   // console.log(`data.bio is ${data.bio}`);
@@ -110,7 +112,7 @@ form.addEventListener('submit', (event) => {
     - email: ${data.email}
     - bio: ${data.bio}
     - plan: ${data.plan}
-
+    - topics ${data.topics.join(', ')}
   `;
 });
 
@@ -118,3 +120,8 @@ form.addEventListener('submit', (event) => {
 // Prevent default behavior (navigation/reload) using event.preventDefault()
 
 // 4. Handle form reset - reset the result area text when the form is reset
+// 3 mins.
+// on the form listent to the 'reset' event
+// I want you to set the textContent of the result to
+// "awaiting submission."
+
