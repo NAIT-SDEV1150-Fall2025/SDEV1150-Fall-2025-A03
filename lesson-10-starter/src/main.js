@@ -60,7 +60,16 @@ function serializeData(formElement) {
   // 2. we're going to use something called map which
   // behaves like a foreach but returns a modified array
   // without editing the original array you're looping over.
-
+  // we're going to use this technique to return the values
+  let topics = checkedTopics.map((topicElement) => {
+    // loop like a foreach except we want to return a modified version
+    // and we're just going to return the value of the checked item
+    return topicElement.value;
+  });
+  console.log(`We've converted our list of checked elements`);
+  console.log(checkedTopics);
+  console.log(`into just the values of those elements`);
+  console.log(topics);
 
   // return an object of all over the values
   // a way to return multiple values from the
@@ -70,6 +79,7 @@ function serializeData(formElement) {
     email: email.value,
     bio: bio.value,
     plan: plan.value,
+    topics: topics,
   };
 }
 
