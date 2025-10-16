@@ -5,6 +5,18 @@ const form = document.querySelector('#contact-form');
 const result = document.querySelector('#result');
 
 // 2. Function to gather and structure form data
+function serializeData(formElement) {
+  // let's take a look at all of the form elements
+  console.log(formElement.elements);
+  // below we're going to access the elements and
+  // get the values from the inputs so we can use
+  // them in our application.
+  // let's focus on text based inputs first.
+  let fullName = formElement.elements.fullName;
+  // if you want to see what the user entered into
+  // the input element you use .value on the inpu.
+  console.log(`Fullname value is: ${fullName.value}`);
+}
 
 // Access values using both form.elements and query selectors
 
@@ -16,7 +28,8 @@ form.addEventListener('submit', (event) => {
   // to the server.
   event.preventDefault();
 
-  console.log('form submitted');
+  // we're going to get the data from the form.
+  const data = serializeData(form);
 });
 
 // Use 'submit' event on the form, not 'click' on the button
