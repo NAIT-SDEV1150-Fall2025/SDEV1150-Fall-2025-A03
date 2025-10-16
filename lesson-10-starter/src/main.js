@@ -45,7 +45,20 @@ function serializeData(formElement) {
   // equal to value of the option.
   let plan = formElement.elements.plan;
   // just like before the "plan" is the name of the input
-  console.log(`plan is ${plan.value}`);
+  // console.log(`plan is ${plan.value}`);
+
+  // checkboxes are a bit more difficult.
+  // we're going to do this in a couple of steps.
+  // 1. we're going to select all of the inputs
+  // that are checked I'm going to give you folks this
+  // selector and you're just trust we're going to select
+  // all inputs with name checkbox that are checked
+  // and convert it to an array.
+  let checkedTopics = Array.from(document.querySelectorAll(
+    'input[name="topics"]:checked',
+  ));
+  console.log(checkedTopics);
+
 
   // return an object of all over the values
   // a way to return multiple values from the
