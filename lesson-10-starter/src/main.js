@@ -20,6 +20,9 @@ function serializeData(formElement) {
   console.log(fullName); // the same thing that you would get from a query selector.
   console.log(`Fullname value is: ${fullName.value}`);
 
+  // get the email and the bio print it out to the console.
+
+
 }
 
 // Access values using both form.elements and query selectors
