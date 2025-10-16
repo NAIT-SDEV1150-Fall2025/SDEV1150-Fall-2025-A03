@@ -35,9 +35,17 @@ function serializeData(formElement) {
   // the following technique you don't need to use this
   // if it's confusing just the above.
   let { fullName, bio, email } = formElement.elements;
-  console.log(`Fullname value is: ${fullName.value}`);
-  console.log(`email is: ${email.value}`);
-  console.log(`bio is: ${bio.value}`);
+  // creating three variables at once
+  // console.log(`Fullname value is: ${fullName.value}`);
+  // console.log(`email is: ${email.value}`);
+  // console.log(`bio is: ${bio.value}`);
+
+  // return an object of all over the values
+  return {
+    fullName: fullName.value,
+    email: email.value,
+    bio: bio.value,
+  };
 }
 
 // Access values using both form.elements and query selectors
