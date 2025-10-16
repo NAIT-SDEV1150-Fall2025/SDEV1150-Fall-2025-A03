@@ -40,11 +40,19 @@ function serializeData(formElement) {
   // console.log(`email is: ${email.value}`);
   // console.log(`bio is: ${bio.value}`);
 
+  // for an input of a radio button you can only select
+  // a single option so essentically it's going to be
+  // equal to value of the option.
+  let plan = formElement.elements.plan;
+  // just like before the "plan" is the name of the input
+  console.log(`plan is ${plan.value}`);
+
   // return an object of all over the values
   return {
     fullName: fullName.value,
     email: email.value,
     bio: bio.value,
+    plan: plan.value,
   };
 }
 
@@ -60,6 +68,8 @@ form.addEventListener('submit', (event) => {
 
   // we're going to get the data from the form.
   const data = serializeData(form);
+  // we're going to access and use those items.
+  console.log(data)
 });
 
 // Use 'submit' event on the form, not 'click' on the button
