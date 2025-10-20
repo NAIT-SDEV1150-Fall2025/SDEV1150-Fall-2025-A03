@@ -85,6 +85,15 @@ form.addEventListener('input', (event) => {
   }
 
   // 1.3 custom validation for email (basic pattern check)
+  // regex is a way to match items inside of a string.
+  // many times folks use emails for this: https://regex101.com/r/SOgUIV/2
+  // we're going to do this a couple of ways one with the above.
+  // and two just check is there's an @ symbol to.
+  if (element.name === 'email') {
+    // we're going to have a specific regex
+    const pattern = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm/
+  }
+
 
   // 1.4 report the validity status to the user
   element.reportValidity();
