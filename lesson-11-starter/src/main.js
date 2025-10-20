@@ -69,6 +69,9 @@ form.addEventListener('input', (event) => {
   }
 
   // 1.2 custom validation for bio (minimum length)
+  // do the same thing but I want you to make sure that the length
+  // of the value of the bio is more than 40 chars
+
 
   // 1.3 custom validation for email (basic pattern check)
 
