@@ -44,13 +44,14 @@ form.addEventListener('reset', () => {
 // I want you to put an event listener on the form that will listen to input events.
 form.addEventListener('input', (event) => {
   // console.log the event.target in the console.
-  const element = event.target;
+  const element = event.target; // remember this is the same as getting it with querySelector
   console.log(element);
 
   // console.log the name of the selected element in the console.
   console.log(`element name: ${element.name}`);
   console.log(`element value: ${element.value}`);
   // 1.1 custom validation for fullName (must contain two words)
+  //
 
   // 1.2 custom validation for bio (minimum length)
 
