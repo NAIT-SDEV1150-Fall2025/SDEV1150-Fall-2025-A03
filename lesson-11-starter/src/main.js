@@ -59,6 +59,7 @@ form.addEventListener('input', (event) => {
   // I want you to show the error message.
   // use docs here: https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity
 
+
   // 1.2 custom validation for bio (minimum length)
 
   // 1.3 custom validation for email (basic pattern check)
