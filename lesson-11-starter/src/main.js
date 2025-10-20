@@ -91,7 +91,13 @@ form.addEventListener('input', (event) => {
   // and two just check is there's an @ symbol to.
   if (element.name === 'email') {
     // we're going to have a specific regex
-    const pattern = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm/
+    const regexEmailPattern = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+    // checks that the pattern isn't met (which is the invalid value)
+    if (!regexEmailPattern.test(element.value)) {
+      element.setCustomValidity(`'${element.value}' isn't a valid email`);
+    } else {
+      element.setCustomValidity('');
+    }
   }
 
 
