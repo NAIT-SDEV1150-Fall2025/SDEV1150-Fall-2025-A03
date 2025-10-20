@@ -51,7 +51,13 @@ form.addEventListener('input', (event) => {
   console.log(`element name: ${element.name}`);
   console.log(`element value: ${element.value}`);
   // 1.1 custom validation for fullName (must contain two words)
-  //
+  // if the element is "fullName"
+  // I want you to check that it's got
+  // two parts (a space in between)
+  // add a custom error message that "Full name must contain at least two words"
+  // clear the error message if it's valid
+  // I want you to show the error message.
+  // use docs here: https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity
 
   // 1.2 custom validation for bio (minimum length)
 
