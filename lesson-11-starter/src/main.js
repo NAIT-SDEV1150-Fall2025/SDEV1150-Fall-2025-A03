@@ -53,11 +53,17 @@ form.addEventListener('input', (event) => {
   // 1.1 custom validation for fullName (must contain two words)
   // if the element's name is "fullName"
   if (element.name === 'fullName') {
-    console.log(`checking the fullName`);
     // I want you to check that it's got
     // two parts (a space in between)
-    // add a custom error message that "Full name must contain at least two words"
-    // clear the error message if it's valid
+    const parts = element.value.trim().split(' ');
+    if (parts.length < 2) {
+      // add a custom error message that "Full name must contain at least two words"
+      // here's where we add our own custom validity
+      element.setCustomValidity('Full name must contain at least two words');
+    } else {
+      // clear the error message if it's valid
+
+    }
     // I want you to show the error message.
     // use docs here: https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity
   }
