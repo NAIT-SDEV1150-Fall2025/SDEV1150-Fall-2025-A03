@@ -62,7 +62,7 @@ form.addEventListener('input', (event) => {
       element.setCustomValidity('Full name must contain at least two words');
     } else {
       // clear the error message if it's valid
-
+      element.setCustomValidity(''); // set it to an empty string.
     }
     // I want you to show the error message.
     // use docs here: https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity
@@ -73,4 +73,5 @@ form.addEventListener('input', (event) => {
   // 1.3 custom validation for email (basic pattern check)
 
   // 1.4 report the validity status to the user
+  element.reportValidity();
 });
