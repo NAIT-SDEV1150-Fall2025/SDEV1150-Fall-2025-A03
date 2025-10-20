@@ -42,13 +42,19 @@ form.addEventListener('reset', () => {
 
 // 1. Add validation logic to the form on 'input' events
 // I want you to put an event listener on the form that will listen to input events.
-// console.log the event.target in the console.
-// console.log the name of the selected element in the console.
+form.addEventListener('input', (event) => {
+  // console.log the event.target in the console.
+  const element = event.target;
+  console.log(element);
 
-// 1.1 custom validation for fullName (must contain two words)
+  // console.log the name of the selected element in the console.
+  console.log(`element name: ${element.name}`);
+  console.log(`element value: ${element.value}`);
+  // 1.1 custom validation for fullName (must contain two words)
 
-// 1.2 custom validation for bio (minimum length)
+  // 1.2 custom validation for bio (minimum length)
 
-// 1.3 custom validation for email (basic pattern check)
+  // 1.3 custom validation for email (basic pattern check)
 
-// 1.4 report the validity status to the user
+  // 1.4 report the validity status to the user
+});
