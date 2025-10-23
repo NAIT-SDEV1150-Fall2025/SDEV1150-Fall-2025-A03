@@ -12,5 +12,5 @@ console.log('A Small node example');
 // let's display date and time.
 console.log('the date is');
 console.log(now.format('YYYY-MM-DD'));
-console.log('the time is');
-console.log(now.format('HH-mm-ss'));
+console.log('the time right now is');
+console.log(now.format('HH:mm:ss'));
