@@ -6,8 +6,8 @@
     {
       "id": "nOqz04oVhcaQmMylorcAH",
       "type": "text",
-      "x": 249.84811352926567,
-      "y": -15.472222222222172,
+      "x": 343.41204349578356,
+      "y": -141.19766865079362,
       "width": 183.38394165039062,
       "height": 45,
       "angle": 0,
@@ -23,11 +23,11 @@
       "index": "a0",
       "roundness": null,
       "seed": 1862459419,
-      "version": 129,
-      "versionNonce": 1954404373,
+      "version": 178,
+      "versionNonce": 1920750267,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1761230627986,
+      "updated": 1761232330818,
       "link": null,
       "locked": false,
       "text": "Using NPM",
@@ -3277,6 +3277,426 @@
       "pressures": [],
       "simulatePressure": true,
       "lastCommittedPoint": null
+    },
+    {
+      "id": "NnTYqPcfDMBdtkPyvqKpb",
+      "type": "text",
+      "x": -515.8199811662948,
+      "y": 73.22242954799106,
+      "width": 312.98888034311534,
+      "height": 360.71428571428567,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "ad",
+      "roundness": null,
+      "seed": 648113275,
+      "version": 329,
+      "versionNonce": 543685787,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1761232200019,
+      "link": null,
+      "locked": false,
+      "text": "1. we need to create\nthe package.json file\nthis is done one of two\nways `npm init` or \nwith some project\ntemplate builder like\nwe've been using with \nNPM.\n\nImportant note package.json\nis an editable file, you can\nchange this we will today.\n",
+      "fontSize": 22.197802197802204,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "1. we need to create\nthe package.json file\nthis is done one of two\nways `npm init` or \nwith some project\ntemplate builder like\nwe've been using with \nNPM.\n\nImportant note package.json\nis an editable file, you can\nchange this we will today.\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "uJtmvoJHCSH5nQfeKK7Ww",
+      "type": "freedraw",
+      "x": -135.61163694896368,
+      "y": 135.9158935546875,
+      "width": 45,
+      "height": 138.984375,
+      "angle": 0,
+      "strokeColor": "#c2255c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "ai",
+      "roundness": null,
+      "seed": 1748219285,
+      "version": 33,
+      "versionNonce": 1336050747,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1761232247026,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -4.01043701171875,
+          3.984375
+        ],
+        [
+          -5.67706298828125,
+          8.984375
+        ],
+        [
+          -9.01043701171875,
+          13.984375
+        ],
+        [
+          -10.67706298828125,
+          17.3177490234375
+        ],
+        [
+          -12.34375,
+          25.65106201171875
+        ],
+        [
+          -14.01043701171875,
+          28.984375
+        ],
+        [
+          -14.01043701171875,
+          33.984375
+        ],
+        [
+          -14.01043701171875,
+          38.984375
+        ],
+        [
+          -14.01043701171875,
+          42.3177490234375
+        ],
+        [
+          -14.01043701171875,
+          50.65106201171875
+        ],
+        [
+          -14.01043701171875,
+          57.3177490234375
+        ],
+        [
+          -14.01043701171875,
+          62.3177490234375
+        ],
+        [
+          -14.01043701171875,
+          65.65106201171875
+        ],
+        [
+          -14.01043701171875,
+          67.3177490234375
+        ],
+        [
+          -14.01043701171875,
+          70.65106201171875
+        ],
+        [
+          -12.34375,
+          72.3177490234375
+        ],
+        [
+          -9.01043701171875,
+          80.65106201171875
+        ],
+        [
+          -9.01043701171875,
+          83.984375
+        ],
+        [
+          -5.67706298828125,
+          87.3177490234375
+        ],
+        [
+          -5.67706298828125,
+          88.984375
+        ],
+        [
+          -4.01043701171875,
+          95.65106201171875
+        ],
+        [
+          -0.67706298828125,
+          102.3177490234375
+        ],
+        [
+          2.65625,
+          108.984375
+        ],
+        [
+          4.32293701171875,
+          112.3177490234375
+        ],
+        [
+          9.32293701171875,
+          120.65106201171875
+        ],
+        [
+          14.32293701171875,
+          123.984375
+        ],
+        [
+          20.98956298828125,
+          128.984375
+        ],
+        [
+          24.32293701171875,
+          132.3177490234375
+        ],
+        [
+          30.98956298828125,
+          135.65106201171875
+        ],
+        [
+          30.98956298828125,
+          138.984375
+        ],
+        [
+          30.98956298828125,
+          138.984375
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        30.98956298828125,
+        138.984375
+      ]
+    },
+    {
+      "id": "5UW_zMKuuV8PuSotqo7Zy",
+      "type": "freedraw",
+      "x": -93.94494993724493,
+      "y": 252.58258056640625,
+      "width": 19.01043701171875,
+      "height": 42.31768798828125,
+      "angle": 0,
+      "strokeColor": "#c2255c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aj",
+      "roundness": null,
+      "seed": 463161941,
+      "version": 19,
+      "versionNonce": 1029635867,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1761232247842,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -2.34375,
+          0.65106201171875
+        ],
+        [
+          -2.34375,
+          7.31768798828125
+        ],
+        [
+          -2.34375,
+          13.984375
+        ],
+        [
+          -2.34375,
+          20.65106201171875
+        ],
+        [
+          -2.34375,
+          25.65106201171875
+        ],
+        [
+          -2.34375,
+          27.31768798828125
+        ],
+        [
+          -2.34375,
+          28.984375
+        ],
+        [
+          -2.34375,
+          32.31768798828125
+        ],
+        [
+          -0.6771240234375,
+          35.65106201171875
+        ],
+        [
+          -0.6771240234375,
+          37.31768798828125
+        ],
+        [
+          -0.6771240234375,
+          38.984375
+        ],
+        [
+          -2.34375,
+          38.984375
+        ],
+        [
+          -4.01043701171875,
+          38.984375
+        ],
+        [
+          -7.34375,
+          38.984375
+        ],
+        [
+          -19.01043701171875,
+          38.984375
+        ],
+        [
+          -19.01043701171875,
+          42.31768798828125
+        ],
+        [
+          -19.01043701171875,
+          42.31768798828125
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        -19.01043701171875,
+        42.31768798828125
+      ]
+    },
+    {
+      "id": "x-MnA-_Fhz5LQtDylAWB9",
+      "type": "text",
+      "x": -226.5788785086737,
+      "y": -127.91591099330356,
+      "width": 548.899658203125,
+      "height": 225,
+      "angle": 0,
+      "strokeColor": "#c2255c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "ak",
+      "roundness": null,
+      "seed": 131008885,
+      "version": 463,
+      "versionNonce": 1116156955,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1761232362317,
+      "link": null,
+      "locked": false,
+      "text": "Package.json is going to \na few things in it that we're\ngoing to use:\n1. Metadata (describing the project)\n2. scripts (command line tools that we're\n   going to use like \"npm run dev\")\n3. dependencies external packages\n   - devDependencies: packages used only in development\n   - depencies: packages used on the site itself.",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Package.json is going to \na few things in it that we're\ngoing to use:\n1. Metadata (describing the project)\n2. scripts (command line tools that we're\n   going to use like \"npm run dev\")\n3. dependencies external packages\n   - devDependencies: packages used only in development\n   - depencies: packages used on the site itself.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "lr63JbtgyKnzh-lyAiZop",
+      "type": "text",
+      "x": 226.28567576029968,
+      "y": 156.61904471261164,
+      "width": 475.3997802734375,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "al",
+      "roundness": null,
+      "seed": 771172699,
+      "version": 123,
+      "versionNonce": 1127882395,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1761232411323,
+      "link": null,
+      "locked": false,
+      "text": "3. installed a package.\nnpm install dayjs\nThis is goign to look at the most recent version",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "3. installed a package.\nnpm install dayjs\nThis is goign to look at the most recent version",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "6Eqenp4I50X55_ZCy61Gg",
+      "type": "text",
+      "x": 247.0074357456631,
+      "y": 459.7254533237883,
+      "width": 392.97979736328125,
+      "height": 175,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "am",
+      "roundness": null,
+      "seed": 751583355,
+      "version": 229,
+      "versionNonce": 526928437,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1761232474974,
+      "link": null,
+      "locked": false,
+      "text": "4. (done by npm)\nadd to the depencies \n\"dayjs\": \"mostrecentversion\"\nand it'll also add it to the \nnode_modules folder \nNote, you never have to touch the node\nmodules folder.",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "4. (done by npm)\nadd to the depencies \n\"dayjs\": \"mostrecentversion\"\nand it'll also add it to the \nnode_modules folder \nNote, you never have to touch the node\nmodules folder.",
+      "autoResize": true,
+      "lineHeight": 1.25
     }
   ],
   "appState": {
