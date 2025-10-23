@@ -1,6 +1,6 @@
 // let's use our new package.
 // taking a look at now docs: https://day.js.org/docs/en/parse/now
-import dayjs from 'dayjs' // this can be used because we have "type": "module" in the package.json.
+import dayjs from 'dayjs'; // this can be used because we have "type": "module" in the package.json.
 // the modern way to import js modules.
 
 // let's get todays date
