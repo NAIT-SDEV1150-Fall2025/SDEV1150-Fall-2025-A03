@@ -112,5 +112,13 @@ form.addEventListener('input', (event) => {
   console.log(element.validationMessage);
 
   // 1.4 report the validity status to the user
-  element.reportValidity();
+  const test = element.reportValidity();
+  // note this returns a boolean that you can use if you wanted to submit
+  // the form in a conditional.
+  console.log(test); // true or false.
+  // one more thing you can check element validity
+  // note you won't need for assignment 2 but validity state
+  // gives a whole bunc hof options iwth this.
+  console.log(element.validity);
+
 });
