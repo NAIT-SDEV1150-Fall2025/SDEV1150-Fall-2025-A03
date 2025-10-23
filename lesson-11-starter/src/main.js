@@ -47,9 +47,7 @@ form.addEventListener('input', (event) => {
   const element = event.target; // remember this is the same as getting it with querySelector
   console.log(element);
 
-  // console.log the name of the selected element in the console.
-  console.log(`element name: ${element.name}`);
-  console.log(`element value: ${element.value}`);
+
   // 1.1 custom validation for fullName (must contain two words)
   // if the element's name is "fullName"
   if (element.name === 'fullName') {
@@ -103,6 +101,15 @@ form.addEventListener('input', (event) => {
       element.setCustomValidity('');
     }
   }
+  // console.log the name of the selected element in the console.
+  console.log(element);
+  console.log(`element name: ${element.name}`);
+  console.log(`element value: ${element.value}`);
+  // one thing that is handy for assignment 2 here is that you're going to use
+  // the validationMessage on the element, this asks you add the validity message
+  // to an element (with your dom api, think nextElementSibling hint)
+  console.log('the message sent with setCustomValidity');
+  console.log(element.validationMessage);
 
   // 1.4 report the validity status to the user
   element.reportValidity();
