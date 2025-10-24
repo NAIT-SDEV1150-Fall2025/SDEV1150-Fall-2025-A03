@@ -120,5 +120,4 @@ form.addEventListener('input', (event) => {
   // note you won't need for assignment 2 but validity state
   // gives a whole bunc hof options iwth this.
   console.log(element.validity);
-
 });
