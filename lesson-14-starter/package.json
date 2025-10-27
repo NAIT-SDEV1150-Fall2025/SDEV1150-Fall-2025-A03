@@ -16,6 +16,7 @@
     "vite": "^7.0.4"
   },
   "dependencies": {
+    "animejs": "^4.2.2",
     "dayjs": "^1.11.18"
   }
 }
