@@ -16,12 +16,17 @@ function greetUser(name) {
 // definition and it will be have the same way as the
 // other export method.
 export function getDate() {
-  return dayjs().format('DD/MM/YYYY');
+  return dayjs().format('D MMM YY');
 }
 // I want you to return the formatted date (date only)
 // export this, import in the main.js
 // I want you to update the html with the current date
 // (where it says today)
+
+// three mins do the time!
+// getTime function
+// update the time element
+// update the greet element with the greeting.
 
 
 
