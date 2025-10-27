@@ -28,7 +28,7 @@ animate(
   {
     translateY: [-20, 0],
     opacity: [0, 1],
-    duration: 5000,
+    duration: 300, // increase to 5000 to see more exaggerated animation.
     easing: 'easeOutQuad',
   },
 );
