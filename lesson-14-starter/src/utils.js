@@ -27,6 +27,13 @@ export function getDate() {
 // getTime function
 // update the time element
 // update the greet element with the greeting.
+export function getTime() {
+
+  return dayjs().format('HH:mm:ss');
+}
+
+// note for the dayjs function you can refer
+// here for the docs: https://day.js.org/docs/en/display/format
 
 
 
