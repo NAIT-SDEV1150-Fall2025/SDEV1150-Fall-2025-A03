@@ -28,7 +28,6 @@ export function getDate() {
 // update the time element
 // update the greet element with the greeting.
 export function getTime() {
-
   return dayjs().format('HH:mm:ss');
 }
 
