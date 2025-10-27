@@ -34,8 +34,16 @@ export function getTime() {
 // note for the dayjs function you can refer
 // here for the docs: https://day.js.org/docs/en/display/format
 
-
-
 // with export I'm going to make this function
 // importable to another function.
 export { greetUser };
+
+// there's name exports like above
+// and you can have as many as you'd like
+// of these in a file.
+
+// there's also DEFAULT exports where
+// you only get one.
+export default function getDefaultUser() {
+  return 'gary';
+}

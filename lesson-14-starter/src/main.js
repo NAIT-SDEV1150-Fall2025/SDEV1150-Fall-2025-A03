@@ -1,6 +1,6 @@
 console.log('Lesson 14 starter loaded');
 // let's import the animate from animejs
-import { animate } from 'animejs'
+import { animate } from 'animejs';
 
 // make it so that we can use this function
 import {
@@ -9,7 +9,9 @@ import {
   getTime,
 } from './utils';
 
-console.log(greetUser('Dan'));
+// to import DEFAULT exports, you don't use the curly
+// braces with the function name
+import getDefaultUser from './utils';
 
 let dateEl = document.querySelector('#today');
 let timeEl = document.querySelector('#time');
@@ -20,7 +22,9 @@ let greetEl = document.querySelector('#greet');
 dateEl.textContent = getDate();
 timeEl.textContent = getTime();
 // let's just our greeting
-greetEl.textContent = greetUser('Dan');
+greetEl.textContent = greetUser(
+  getDefaultUser(),
+);
 
 // we're going to use
 animate(
