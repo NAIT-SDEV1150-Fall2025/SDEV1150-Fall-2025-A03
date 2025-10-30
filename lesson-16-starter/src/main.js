@@ -9,6 +9,7 @@ let loadButton = document.querySelector('#loadBooks');
 const BACKEND_ENDPOINT = 'http://localhost:3000/books';
 // Define a function to handle loading and displaying the list of books
 async function loadHandler() {
+  // use getData to fetch backend data.
   try {
     const books = await getData(BACKEND_ENDPOINT);
     console.log(books);
