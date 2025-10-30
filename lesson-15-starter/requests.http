@@ -1,0 +1,21 @@
+
+
+### Get all books here.
+# click "send request"
+GET http://localhost:3000/books
+
+
+### POST give information to the server
+# we need to tell the server what type of
+# data we're sending to the server
+# we need to specify headers to do so with
+# Content-Type: application/json
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "title": "Dans Memoirs",
+    "author": "Sir Daniel Mouris",
+    "year": 2030,
+    "genre": "Lore"
+}
