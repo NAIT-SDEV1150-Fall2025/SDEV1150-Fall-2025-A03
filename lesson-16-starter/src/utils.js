@@ -1,4 +1,22 @@
 // Fetch utility function
+// This will get data at a given endpoint.
+// async turns this into a promise
+// a promise can be fulfilled or rejected
+
+export async function getData(endpoint) {
+  // you're going to await the request that's going
+  // over the network
+  const response = await fetch(endpoint, {
+    method: 'GET',
+  });
+  console.log('response', response);
+  // the above is making the request
+  // we want to throw an error if it's anything but 200s
+  // on the response there's response.ok to tell us this
+  if (!response.ok) {
+    throw new Error('Network response failed');
+  }
+}
 
 // POST utility function
 
