@@ -16,6 +16,12 @@ export async function getData(endpoint) {
   if (!response.ok) {
     throw new Error('Network response failed');
   }
+  // on the response we can't guarantee that the json
+  // is well formed, there's a method as well await
+  // which converting the json to a js object
+  const data = await response.json();
+  console.log('data', data);
+  return data;
 }
 
 // POST utility function
