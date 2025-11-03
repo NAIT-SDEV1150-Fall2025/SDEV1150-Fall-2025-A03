@@ -19,3 +19,17 @@ Content-Type: application/json
     "year": 2030,
     "genre": "Lore"
 }
+
+### PATCH request
+# modify a request, not sending all of the keys
+# a typical patch, like POST requests we need to send
+# data which also means we need to set the header of
+# Content-Type: application/json
+# we also are going to use the ID to uniquely modify
+# a specific item.
+PATCH http://localhost:3000/books/632b
+Content-Type: application/json
+
+{
+    "title": "The last DANce, Dans biography"
+}
