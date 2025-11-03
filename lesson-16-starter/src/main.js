@@ -4,17 +4,23 @@ import { getData } from './utils';
 
 // Select the necessary DOM elements
 let loadButton = document.querySelector('#loadBooks');
+let list = document.querySelector('#bookList');
 
 // Define the API endpoint
 const BACKEND_ENDPOINT = 'http://localhost:3000/books';
 // Define a function to handle loading and displaying the list of books
 async function loadHandler() {
+  // list element for loading.
+  list.innerHTML = `<li>Loading...</li>`
   // use getData to fetch backend data.
   try {
+    // books below is a usable list of js objects.
     const books = await getData(BACKEND_ENDPOINT);
+    // I'm oging to loop over them and create list elements
     console.log(books);
   } catch (error) {
     console.log(error);
+    // render an error list item
   }
 }
 
