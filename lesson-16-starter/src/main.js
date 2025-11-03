@@ -17,6 +17,8 @@ async function loadHandler() {
     // books below is a usable list of js objects.
     const books = await getData(BACKEND_ENDPOINT);
     console.log(books);
+    // clean the loading in a lazy way
+    list.innerHTML = '';
     // I'm oging to loop over them and create list elements
     books.forEach((book) => {
       console.log('book', book);
