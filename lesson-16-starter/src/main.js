@@ -18,7 +18,7 @@ async function loadHandler() {
     const books = await getData(BACKEND_ENDPOINT);
     console.log(books);
     // I'm oging to loop over them and create list elements
-    books.forEach((book)=> {
+    books.forEach((book) => {
       console.log('book', book);
       // creating the element
       const li = document.createElement('li');
