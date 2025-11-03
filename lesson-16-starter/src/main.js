@@ -11,13 +11,22 @@ const BACKEND_ENDPOINT = 'http://localhost:3000/books';
 // Define a function to handle loading and displaying the list of books
 async function loadHandler() {
   // list element for loading.
-  list.innerHTML = `<li>Loading...</li>`
+  list.innerHTML = `<li>Loading...</li>`;
   // use getData to fetch backend data.
   try {
     // books below is a usable list of js objects.
     const books = await getData(BACKEND_ENDPOINT);
-    // I'm oging to loop over them and create list elements
     console.log(books);
+    // I'm oging to loop over them and create list elements
+    books.forEach((book)=> {
+      console.log('book', book);
+      // creating the element
+      const li = document.createElement('li');
+      li.textContent = `${book.title} by ${book.author}`;
+      console.log('li', li);
+      // attach it the list.
+      list.appendChild(li);
+    });
   } catch (error) {
     console.log(error);
     // render an error list item
