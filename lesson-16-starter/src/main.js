@@ -28,10 +28,12 @@ async function loadHandler() {
       console.log('li', li);
       // attach it the list.
       list.appendChild(li);
+      console.log('-----------------');
     });
   } catch (error) {
     console.log(error);
     // render an error list item
+    list.innerHTML = `<li style="color: red;">${error}</li>`;
   }
 }
 
