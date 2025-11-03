@@ -3,8 +3,9 @@ import { getData, postData } from './utils';
 // note node modules for the above
 
 // Select the necessary DOM elements
-let loadButton = document.querySelector('#loadBooks');
-let list = document.querySelector('#bookList');
+const loadButton = document.querySelector('#loadBooks');
+const list = document.querySelector('#bookList');
+const addBook = document.querySelector('#addBook');
 
 // Define the API endpoint
 const BACKEND_ENDPOINT = 'http://localhost:3000/books';
@@ -52,8 +53,6 @@ async function submitHandler(event) {
     formData.entries(),
   );
   console.log(data);
-
-
 }
 
 // Attach event listeners to the button and form
