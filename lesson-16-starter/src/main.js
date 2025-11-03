@@ -40,7 +40,7 @@ async function loadHandler() {
 
 // Define a function to handle form submission for adding a new book
 async function submitHandler(event) {
-  event.preventDefault()
+  event.preventDefault();
   // let's get the data from the form in
   // a bit of a different way
   const form = event.target;
@@ -58,5 +58,5 @@ async function submitHandler(event) {
 // Attach event listeners to the button and form
 loadButton.addEventListener('click', loadHandler);
 // we're letting javascript call not us so don't add the () on the end
-
+addBook.addEventListener('submit', submitHandler);
 // TODO: Add delete functionality
