@@ -34,6 +34,13 @@
       "author": "The instructor formerly known as Dan",
       "year": 2032,
       "genre": "Adventure"
+    },
+    {
+      "id": "22c3",
+      "title": "JavaScript Dungeons",
+      "author": "Person who tries catches with no message",
+      "year": 2025,
+      "genre": "Epic"
     }
   ]
 }

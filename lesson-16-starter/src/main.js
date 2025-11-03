@@ -52,7 +52,23 @@ async function submitHandler(event) {
   const data = Object.fromEntries(
     formData.entries(),
   );
+  // above is a quick way to get data from the form.
+  data['year'] = Number(data['year']);
   console.log(data);
+  try {
+    // post to the server, with the payload
+    await postData(BACKEND_ENDPOINT, data);
+    // call my load handler to refresh the data on
+    // the page.
+    loadHandler();
+    // the load handler will refresh the data
+    // reset the form.
+    form.reset();
+  } catch (error) {
+    console.error(error);
+    // this is the bare minimum that you can have in a
+    // try catch.
+  }
 }
 
 // Attach event listeners to the button and form
