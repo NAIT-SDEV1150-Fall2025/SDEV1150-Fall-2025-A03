@@ -1,5 +1,5 @@
 // Import the functions necessary to make the API calls
-import { getData } from './utils';
+import { getData, postData } from './utils';
 // note node modules for the above
 
 // Select the necessary DOM elements
@@ -38,6 +38,23 @@ async function loadHandler() {
 }
 
 // Define a function to handle form submission for adding a new book
+async function submitHandler(event) {
+  event.preventDefault()
+  // let's get the data from the form in
+  // a bit of a different way
+  const form = event.target;
+  // the form data Class
+  const formData = new FormData(form);
+  // create the json from the formdata entries
+  console.log(formData);
+  // let's extract the js object from form data
+  const data = Object.fromEntries(
+    formData.entries(),
+  );
+  console.log(data);
+
+
+}
 
 // Attach event listeners to the button and form
 loadButton.addEventListener('click', loadHandler);
