@@ -20,6 +20,13 @@
       "author": "Ganondorf",
       "year": 2021,
       "genre": "Epic"
+    },
+    {
+      "id": "3917",
+      "title": "Dungeon Crawler Carl",
+      "author": "Matt Dinniman",
+      "year": 2025,
+      "genre": "Adventure"
     }
   ]
 }

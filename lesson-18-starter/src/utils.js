@@ -18,7 +18,12 @@ export async function fetchData(endpoint) {
 export async function postData(endpoint, payload) {
   const response = await fetch(endpoint, {
     method: 'POST',
-    body: payload,
+    // let the server know that we are sending json.
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // we need to serialize the data
+    body: JSON.stringify(payload),
   });
 
   if (!response.ok) {
