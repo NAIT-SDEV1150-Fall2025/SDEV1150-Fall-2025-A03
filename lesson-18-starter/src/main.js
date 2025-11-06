@@ -8,22 +8,27 @@ const endpoint = 'http://localhost:3000/books';
 async function loadHandler() {
   list.innerHTML = '<li>Loading...</li>';
 
-  // here without the await what do we have
-  // we have the Promise and not the resolution (which is the data.)
-  const books = fetchData(endpoint);
+  // we want to gracefully catch errors and display it to the users.
+  try {
+    // here without the await what do we have
+    // we have the Promise and not the resolution (which is the data.)
+    const books = await fetchData(endpoint);
 
-  console.log(books);
+    console.log(books);
 
-  // Simulate a delay for demonstration purposes
-  await new Promise(resolve => setTimeout(resolve, 2000));
+    // Simulate a delay for demonstration purposes
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-  list.innerHTML = '';
+    list.innerHTML = '';
 
-  books.forEach((book) => {
-    const li = document.createElement('li');
-    li.textContent = `${book.title} by ${book.author}`;
-    list.appendChild(li);
-  });
+    books.forEach((book) => {
+      const li = document.createElement('li');
+      li.textContent = `${book.title} by ${book.author}`;
+      list.appendChild(li);
+    });
+  } catch (error) {
+    list.innerHTML = `<li style="color: red;">Error ${error}</li>`;
+  }
 }
 
 async function submitHandler(e) {
