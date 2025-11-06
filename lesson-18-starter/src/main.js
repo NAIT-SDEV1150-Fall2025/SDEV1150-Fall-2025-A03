@@ -3,12 +3,16 @@ import { fetchData, postData } from './utils';
 const loadButton = document.getElementById('loadBooks');
 const addForm = document.getElementById('addBook');
 const list = document.getElementById('bookList');
-const endpoint = 'http://localhost:3000/book';
+const endpoint = 'http://localhost:3000/books';
 
 async function loadHandler() {
   list.innerHTML = '<li>Loading...</li>';
 
+  // here without the await what do we have
+  // we have the Promise and not the resolution (which is the data.)
   const books = fetchData(endpoint);
+
+  console.log(books);
 
   // Simulate a delay for demonstration purposes
   await new Promise(resolve => setTimeout(resolve, 2000));
