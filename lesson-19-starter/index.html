@@ -20,14 +20,21 @@
         <!-- image that we're selecting. -->
         <img src="" width="80" height="80" alt="avatar">
         <div class="info">
-          <span class="name">Zelda</span>
-          <span class="description">Princess of Hyrule</span>
+          <!-- we're going to change these into a slot -->
+          <slot name="name" class="name"></slot>
+          <slot name="description" class="description"></slot>
         </div>
       </div>
     </template>
     <!-- Create user-cards here -->
-    <user-card avatar="assets/link-avatar.png"></user-card>
-    <user-card></user-card>
+    <user-card avatar="assets/link-avatar.png">
+      <span slot="name">Link</span>
+      <span slot="description">Hey Listen</span>
+    </user-card>
+    <user-card avatar="assets/zelda-avatar.png">
+      <span slot="name">Zelda</span>
+      <span slot="description">princess of hyrule</span>
+    </user-card>
   </main>
 
 </body>
