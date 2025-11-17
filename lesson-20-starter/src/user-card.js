@@ -63,6 +63,23 @@ class UserCard extends HTMLElement {
     img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
     shadow.appendChild(content);
   }
+
+  // watch the changes in an attribute
+  static get observedAttributes() {
+    // whenever 'avatar' on the <user-card> changes we're
+    // listening to it, there might be many, so we make it
+    // an array of items.
+    return ['avatar'];
+  }
+
+  // execute a function when an attribute changes
+  attributeChangedCallback(name, oldValue, newValue) {
+    // let's take a look
+    console.log('attributeChangedCallback');
+    console.log(`name: ${name}`);
+    console.log(`oldValue: ${oldValue}`);
+    console.log(`newValue: ${newValue}`);
+  }
 }
 customElements.define('user-card', UserCard);
 

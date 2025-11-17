@@ -12,7 +12,11 @@ document.querySelector('main').insertAdjacentHTML('beforeend', dynamicUserCard);
 
 // Create another user card using JavaScript DOM API only and append it to the main element
 const anotherUserCard = document.createElement('user-card');
-anotherUserCard.setAttribute('avatar', 'https://placehold.co/80x80/770000/ffffff');
+
+// not responding to changes
+// in future classes we're going to talk about
+// lifecycle and state management of components
+anotherUserCard.setAttribute('avatar', 'https://placehold.co/80x80/green/yellow');
 const nameSpan = document.createElement('span');
 nameSpan.setAttribute('slot', 'name');
 nameSpan.textContent = 'Yunobo';
