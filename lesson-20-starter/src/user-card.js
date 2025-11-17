@@ -79,6 +79,18 @@ class UserCard extends HTMLElement {
     console.log(`name: ${name}`);
     console.log(`oldValue: ${oldValue}`);
     console.log(`newValue: ${newValue}`);
+    // what we're going to do we are going to keep the
+    // image in sync with the newValue here
+    // check if we have a shadowRoot, and see if the name
+    // is the correct value.
+    if (name === 'avatar' && this.shadowRoot) {
+      // I'm going to select the image from the shadow root.
+      const img = this.shadowRoot.querySelector('img');
+      if (img) {
+        img.src = newValue;
+        // you could also do img.setAttribute('src', newValue)
+      }
+    }
   }
 }
 customElements.define('user-card', UserCard);
