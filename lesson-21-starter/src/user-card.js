@@ -84,6 +84,7 @@ class UserCard extends HTMLElement {
     shadow.appendChild(content);
   }
 
+  // using _ in classes is a syntax to make functions privateIsh
   _setFollow(value) {
     // a note "this" in javascript is the same as "self"
     // in python.
@@ -96,6 +97,17 @@ class UserCard extends HTMLElement {
   // let's create our toggle follow function
   _onFollow() {
     this._setFollow(!this._followed);
+  }
+
+  // let's create some functions that are going to be accessed on the element itself.
+  // create a follow function
+  // and unfollow function.
+  follow() {
+    this._setFollow(true);
+  }
+
+  unFollow() {
+    this._setFollow(false);
   }
 
   // Respond to attribute changes if needed in the future
