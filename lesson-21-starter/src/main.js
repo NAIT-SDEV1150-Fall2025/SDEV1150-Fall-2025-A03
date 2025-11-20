@@ -36,3 +36,10 @@ toggleBtn.addEventListener('click', () => {
   document.documentElement.style.setProperty('--global-card-color', dark ? '#e5e7eb' : '#222222');
   document.documentElement.style.setProperty('--global-card-accent', dark ? 'gold' : '#0077ff');
 });
+
+
+// let's select the user card
+let firstCard = document.querySelector('user-card');
+
+// let's just use our newly created function here.
+firstCard.follow();
