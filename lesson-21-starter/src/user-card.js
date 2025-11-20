@@ -62,8 +62,29 @@ class UserCard extends HTMLElement {
     const img = content.querySelector('img');
     img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
 
+    // we're going to add a state for the follow
+    // just like python a _ in front suggests that
+    // it's a private variable and you should use the
+    // setter function to set this variable.
+    this._followed = false;
+
+    // create a variable on this called _btn select it
+    // from the content
+    // add an event listener of click
+    // use this._setFollow to set it to the opposite value
+    // console.log that the button was clicked.
+
+
+    // shadow at the bottom.
     shadow.appendChild(content);
   }
+
+  _setFollow(value) {
+    // a note "this" in javascript is the same as "self"
+    // in python.
+    this._followed = value;
+  }
+
 
   // Respond to attribute changes if needed in the future
   static get observedAttributes() {
