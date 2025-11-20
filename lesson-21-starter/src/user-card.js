@@ -73,7 +73,12 @@ class UserCard extends HTMLElement {
     // add an event listener of click
     // use this._setFollow to set it to the opposite value
     // console.log that the button was clicked.
-
+    this._btn = content.querySelector('button');
+    this._btn.addEventListener('click', () => {
+      // sets it to the opposite
+      this._setFollow(!this._followed);
+      console.log('Followed clicked: ', this._followed);
+    });
 
     // shadow at the bottom.
     shadow.appendChild(content);
