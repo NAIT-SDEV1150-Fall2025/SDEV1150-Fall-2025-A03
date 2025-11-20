@@ -43,10 +43,24 @@ let firstCard = document.querySelector('user-card');
 // let's just use our newly created function here.
 firstCard.follow();
 
+let main = document.querySelector('main');
+// why don't we just log these changes
+let logList = document.createElement('ul');
+main.appendChild(logList);
 // now that we've dispatched this event.
 // let's listen to the "follow-change" event on main'
-let main = document.querySelector('main');
 main.addEventListener('follow-change', (event) => {
-  console.log('Floow change triggered');
+  console.log('Follow change triggered');
   console.log(event);
+  let logMessage = '';
+  if (event.detail.followed && event.detail.id) {
+    logMessage = `Followed user ${event.detail.id}`;
+  } else if (!event.detail.followed && event.detail.id) {
+    logMessage = `Unfollowed user ${event.detail.id}`;
+  } else {
+    logMessage = `Error user not found`;
+  }
+  let logItem = document.createElement('li');
+  logItem.textContent = logMessage;
+  logList.appendChild(logMessage);
 });
