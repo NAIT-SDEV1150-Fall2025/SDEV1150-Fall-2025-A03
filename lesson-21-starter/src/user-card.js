@@ -76,7 +76,7 @@ class UserCard extends HTMLElement {
     this._btn = content.querySelector('button');
     this._btn.addEventListener('click', () => {
       // sets it to the opposite
-      this._setFollow(!this._followed);
+      this._onFollow();
       console.log('Followed clicked: ', this._followed);
     });
 
@@ -88,8 +88,15 @@ class UserCard extends HTMLElement {
     // a note "this" in javascript is the same as "self"
     // in python.
     this._followed = value;
+
+    // with the setter we're also going to update the button
+    this._btn.textContent = this._followed ? 'Unfollow' : 'Follow';
   }
 
+  // let's create our toggle follow function
+  _onFollow() {
+    this._setFollow(!this._followed);
+  }
 
   // Respond to attribute changes if needed in the future
   static get observedAttributes() {
