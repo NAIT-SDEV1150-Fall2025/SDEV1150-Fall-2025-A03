@@ -62,5 +62,5 @@ main.addEventListener('follow-change', (event) => {
   }
   let logItem = document.createElement('li');
   logItem.textContent = logMessage;
-  logList.appendChild(logMessage);
+  logList.appendChild(logItem);
 });

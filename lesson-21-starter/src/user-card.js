@@ -122,7 +122,7 @@ class UserCard extends HTMLElement {
     this._setFollow(true);
   }
 
-  unFollow() {
+  unfollow() {
     this._setFollow(false);
   }
 
