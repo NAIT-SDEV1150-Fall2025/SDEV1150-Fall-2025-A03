@@ -3,7 +3,7 @@ import './user-card.js';
 
 // Create an additional user card using HTML and append it to the main element
 const dynamicUserCard = `
-    <user-card avatar="https://placehold.co/80x80/7700ff/ffffff">
+    <user-card avatar="https://placehold.co/80x80/7700ff/ffffff" user-id="3">
       <span slot="name">Mipha</span>
       <span slot="description">Zora Champion</span>
     </user-card>`;
@@ -37,9 +37,9 @@ toggleBtn.addEventListener('click', () => {
   document.documentElement.style.setProperty('--global-card-accent', dark ? 'gold' : '#0077ff');
 });
 
-
 // let's select the user card
 let firstCard = document.querySelector('user-card');
 
 // let's just use our newly created function here.
 firstCard.follow();
+

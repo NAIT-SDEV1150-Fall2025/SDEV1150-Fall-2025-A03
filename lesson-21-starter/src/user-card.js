@@ -92,6 +92,22 @@ class UserCard extends HTMLElement {
 
     // with the setter we're also going to update the button
     this._btn.textContent = this._followed ? 'Unfollow' : 'Follow';
+
+    // dispatch an event.
+    // we're going to use a built in function that we inherited
+    // called dispatchEvent
+    // we're going to pass in a CustomEvent which takes two arguments
+    this.dispatchEvent(new CustomEvent(
+      'follow-change', // this is the name of our current event here
+      { // the second argument is an object that allows us to pass data out.
+        detail: {
+          followed: this._followed,
+          id: this.getAttribute('user-id') || null,
+        },
+        bubbles: true, // our event bubbles up by default.
+        composed: true, // our component can span shadow doms
+      },
+    ));
   }
 
   // let's create our toggle follow function
