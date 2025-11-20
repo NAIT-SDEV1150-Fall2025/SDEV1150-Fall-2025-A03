@@ -43,3 +43,10 @@ let firstCard = document.querySelector('user-card');
 // let's just use our newly created function here.
 firstCard.follow();
 
+// now that we've dispatched this event.
+// let's listen to the "follow-change" event on main'
+let main = document.querySelector('main');
+main.addEventListener('follow-change', (event) => {
+  console.log('Floow change triggered');
+  console.log(event);
+});
