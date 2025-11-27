@@ -66,15 +66,33 @@ class UserCard extends HTMLElement {
     // add a user variable
     this.#user = false;
 
+    // bind on event handler
+    this._onButtonClick = this._onButtonClick.bind(this);
 
     const shadow = this.attachShadow({ mode: 'open' });
     const content = template.content.cloneNode(true);
+
+    // _img accessible as a property.
     const img = content.querySelector('img');
-    img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
+    this._img = img;
+    // remove the event handler because we're going to add this
+    // with lifecycle methods.
+    // img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
+
+    // _btn accessible as a property.
     this._btn = content.querySelector('button');
-    this._btn.addEventListener('click', () => this._onFollow());
+    // remove the event handler because we're going to add this
+    // with lifecycle methods.
+    // this._btn.addEventListener('click', () => this._onFollow());
     shadow.appendChild(content);
   }
+
+  // we're going to create some getters and setters for
+  // a new property that is public called "user" where
+  // a developer can set the user to an object and it will
+  // render that object.
+
+
 
   follow() {
     this._setFollow(true);
