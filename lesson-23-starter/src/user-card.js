@@ -87,8 +87,6 @@ class UserCard extends HTMLElement {
     shadow.appendChild(content);
   }
 
-  _onButtonClick() {}
-
   // set the card to all of the values from the object.
   _renderFromUser() {
     console.log(this.#user);
@@ -137,6 +135,28 @@ class UserCard extends HTMLElement {
     return this.#user;
   }
 
+  _onButtonClick() {
+    this._setFollow(!this.#followed);
+  }
+
+  // Lifecycle method: called when element is added to DOM
+  connectedCallback() {
+    // bind the event listeners
+    this._btn.addEventListener('click', this._onButtonClick);
+    // if there's a user we can render it.
+    if (this.#user) {
+      this._renderFromUser();
+    } else {
+      const avatar = this.getAttribute('avatar');
+      if (avatar) {
+        this._img.src = avatar;
+      } else {
+        this._img.src = 'https://placehold.co/80x80/0077ff/ffffff';
+      }
+    }
+  }
+
+  // Lifecycle method:
 
   follow() {
     this._setFollow(true);
