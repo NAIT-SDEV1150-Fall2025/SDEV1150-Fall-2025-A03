@@ -1,6 +1,24 @@
 // Import the user-card component to register the custom element
 import './user-card.js';
 
+// we're going to create cards based on these objects.
+const users = [
+  { id: 'u1', name: 'Zelda', avatar: 'assets/zelda-avatar.png', description: 'Princess of Hyrule' },
+  { id: 'u2', name: 'Link', avatar: 'assets/link-avatar.png', description: 'Hero of Hyrule' },
+  { id: 'u3', name: 'Mipha', description: 'Zora Champion' },
+];
+
+// render the user cards based on this.
+const main = document.querySelector('main');
+users.forEach((userData) => {
+  // create a user card
+  const card = document.createElement('user-card');
+  // set the user using the properties of user and the setter
+  card.user = userData; // this calls the set user(obj) on the class UserCard.
+  // attach it to the page.
+  main.appendChild(card);
+});
+
 // Theme toggle button logic
 let dark = false;
 const toggleBtn = document.querySelector('#btn-theme');
