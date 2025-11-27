@@ -89,7 +89,6 @@ class UserCard extends HTMLElement {
 
   // set the card to all of the values from the object.
   _renderFromUser() {
-    console.log(this.#user);
     // a quick check if the internal state of user exists
     if (this.#user) {
       // populate the card itself from the internal state
