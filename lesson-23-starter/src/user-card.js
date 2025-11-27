@@ -41,7 +41,7 @@ template.innerHTML = `
       flex: 0 0 80px;
     }
   </style>
-  
+
   <div class="card">
     <img src="" width="80" height="80" alt="avatar">
     <div class="info">
@@ -54,11 +54,18 @@ template.innerHTML = `
 document.body.appendChild(template);
 
 class UserCard extends HTMLElement {
+  // a private property
+  #followed = false;
+  #user = null;
+
   constructor() {
     super();
 
     // Added property to track follow state
-    this._followed = false;
+    this.#followed = false;
+    // add a user variable
+    this.#user = false;
+
 
     const shadow = this.attachShadow({ mode: 'open' });
     const content = template.content.cloneNode(true);
@@ -79,14 +86,17 @@ class UserCard extends HTMLElement {
 
   // Property to read followed state
   get followed() {
-    return this._followed;
+    return this.#followed;
   }
 
   _setFollow(value) {
-    this._followed = value;
-    this._btn.textContent = this._followed ? 'Following' : 'Follow';
+    this.#followed = value;
+    this._btn.textContent = this.#followed ? 'Following' : 'Follow';
     this.dispatchEvent(new CustomEvent('follow-change', {
-      detail: { id: this.getAttribute('user-id') || null, followed: this._followed },
+      detail: {
+        id: this.getAttribute('user-id') || null,
+        followed: this.#followed,
+      },
       bubbles: true,
       composed: true,
     }));
@@ -94,7 +104,7 @@ class UserCard extends HTMLElement {
 
   // Follow button handler
   _onFollow() {
-    this._setFollow(!this._followed);
+    this._setFollow(!this.#followed);
   }
 
   // Respond to attribute changes if needed in the future
