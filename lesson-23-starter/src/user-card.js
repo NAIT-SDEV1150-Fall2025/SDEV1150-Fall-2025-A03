@@ -93,12 +93,18 @@ class UserCard extends HTMLElement {
   _renderFromUser() {
     console.log(this.#user);
     // a quick check if the internal state of user exists
-
+    if (this.#user) {
       // populate the card itself from the internal state
       // handle the avatar
+      if (this.#user.avatar) {
+        this._img.src = this.#user.avatar;
+      } else {
+        this._img.src = 'https://placehold.co/80x80/0077ff/ffffff';
+      }
       // handle the user id
       // name
       // description.
+    }
   }
 
   // we're going to create some getters and setters for
