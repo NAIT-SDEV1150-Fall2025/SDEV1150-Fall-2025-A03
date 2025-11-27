@@ -87,8 +87,15 @@ class UserCard extends HTMLElement {
     shadow.appendChild(content);
   }
 
+  // set the card to all of the values from the object.
   _renderFromUser() {
+    // a quick check if the internal state of user exists
 
+      // populate the card itself from the internal state
+      // handle the avatar
+      // handle the user id
+      // name
+      // description.
   }
 
   // we're going to create some getters and setters for
@@ -99,9 +106,9 @@ class UserCard extends HTMLElement {
     // this obj is going to take the shape of
     // { user-id, name, description, avatar }
     // we're going to set the obj to the state.
-    this.#user = obj;
+    this.#user = obj; // this is object is now the internal state
     // we are going to render the card by the user object.
-
+    this._renderFromUser();
   }
 
   // be the property that exposes the internal state.
