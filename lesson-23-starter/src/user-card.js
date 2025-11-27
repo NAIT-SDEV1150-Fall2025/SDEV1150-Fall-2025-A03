@@ -87,11 +87,28 @@ class UserCard extends HTMLElement {
     shadow.appendChild(content);
   }
 
+  _renderFromUser() {
+
+  }
+
   // we're going to create some getters and setters for
   // a new property that is public called "user" where
   // a developer can set the user to an object and it will
   // render that object.
+  set user(obj) {
+    // this obj is going to take the shape of
+    // { user-id, name, description, avatar }
+    // we're going to set the obj to the state.
+    this.#user = obj;
+    // we are going to render the card by the user object.
 
+  }
+
+  // be the property that exposes the internal state.
+  // be accessed with .user
+  get user() {
+    return this.#user;
+  }
 
 
   follow() {
