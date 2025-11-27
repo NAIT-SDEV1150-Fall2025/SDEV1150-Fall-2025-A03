@@ -29,3 +29,11 @@ toggleBtn.addEventListener('click', () => {
   document.documentElement.style.setProperty('--global-card-accent', dark ? 'gold' : '#0077ff');
   toggleBtn.textContent = dark ? '☀️' : '🌙';
 });
+
+// on the main.
+// listen to the "follow-change" event
+// check if the card which will be the event.target
+// is being followed or not
+// if it is add 1 to the follow count and display with the element follow-counter
+// if it is not remove 1 to the follow count and display with the element follow-counter
+
