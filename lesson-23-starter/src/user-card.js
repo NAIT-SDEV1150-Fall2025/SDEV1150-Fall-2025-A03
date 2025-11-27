@@ -115,8 +115,6 @@ class UserCard extends HTMLElement {
       if (descriptionSlot) {
         descriptionSlot.textContent = this.#user.description || '';
       }
-
-
     }
   }
 
