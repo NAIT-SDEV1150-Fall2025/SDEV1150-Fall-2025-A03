@@ -30,10 +30,24 @@ toggleBtn.addEventListener('click', () => {
   toggleBtn.textContent = dark ? '☀️' : '🌙';
 });
 
+let followCount = 0;
 // on the main.
 // listen to the "follow-change" event
-// check if the card which will be the event.target
-// is being followed or not
-// if it is add 1 to the follow count and display with the element follow-counter
-// if it is not remove 1 to the follow count and display with the element follow-counter
-
+main.addEventListener('follow-change', (event) => {
+  // check if the card which will be the event.target
+  const element = event.target;
+  console.log(`followed ${element.followed}`); // get followed
+  console.log('detail of the event', event.detail); // from the dispatch event
+  console.log('user on the element', element.user); // using the getter  get user
+  // is being followed or not
+  if (element.followed) {
+    // if it is add 1 to the follow count and display with the element follow-counter
+    followCount++; // followCount = followCount + 1;
+  } else {
+    // if it is not remove 1 to the follow count and display with the element follow-counter
+    followCount--; // followCount = followCount - 1;
+  }
+  // update the display
+  const followDisplay = document.querySelector('#follow-counter');
+  followDisplay.textContent = `Followed: ${followCount}`;
+});
