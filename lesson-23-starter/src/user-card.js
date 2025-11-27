@@ -102,8 +102,21 @@ class UserCard extends HTMLElement {
         this._img.src = 'https://placehold.co/80x80/0077ff/ffffff';
       }
       // handle the user id
+      // if there is a user id use that and if not just have an empty string.
+      this.setAttribute('user-id', this.#user.id || '');
       // name
+      const nameSlot = this.shadowRoot.querySelector('[name="name"]');
+      if (nameSlot) {
+        nameSlot.textContent = this.#user.name || '';
+      }
+
       // description.
+      const descriptionSlot = this.shadowRoot.querySelector('[name="description"]');
+      if (descriptionSlot) {
+        descriptionSlot.textContent = this.#user.description || '';
+      }
+
+
     }
   }
 
