@@ -59,6 +59,12 @@ describe('UserCard', ()=> {
     // assert the results
     // we're going to select the slots on the page and see if they have
     // the same text as us rightnow
+    const nameSlot = element.shadowRoot.querySelector('slot[name="name"]');
+    const descSlot = element.shadowRoot.querySelector(
+      'slot[name="description"]',
+    );
+    expect(nameSlot.assignedNodes()[0].textContent).toBe(EXPECTED_NAME);
+    expect(descSlot.assignedNodes()[0].textContent).toBe(EXPECTED_DESCRIPTION);
 
   });
 
