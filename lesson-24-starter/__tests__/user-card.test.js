@@ -65,10 +65,27 @@ describe('UserCard', ()=> {
     );
     expect(nameSlot.assignedNodes()[0].textContent).toBe(EXPECTED_NAME);
     expect(descSlot.assignedNodes()[0].textContent).toBe(EXPECTED_DESCRIPTION);
-
   });
 
   // setting an avatar attribute
+  // create the test for this
+  test('sets avatar attribute', () => {
+    // arrange
+    // you're going to need to create the element
+    const element = document.createElement('user-card');
+
+    // you're going to set the attribute after the fact (setAttribute) to a random image
+    const EXPECTED_IMAGE = 'http://cool.com/holo/charizard.jpg';
+    element.setAttribute('src', EXPECTED_IMAGE);
+    // act
+    // add it to the page
+    document.body.appendChild(element);
+    // assert
+    // get the img from the shadow root
+    // check to see if src attribute fo the image is set to the random image url above.
+  })
+
+
   // set a user and see if the component is what we expect
   // follow and unfollow methods
   // click follow button updates state
