@@ -34,6 +34,34 @@ describe('UserCard', ()=> {
     expect(element.followed).toBe(false);
   });
   // renders with a name and description
+  test('renders a name and a description.', () => {
+    // arrange step
+    const element = document.createElement('user-card');
+    // add a name span in the slot
+    const EXPECTED_NAME = 'gary steves';
+    const nameSpan = document.createElement('span');
+    nameSpan.setAttribute('slot', 'name');
+    nameSpan.textContent = EXPECTED_NAME;
+    // add a description span in the slot
+    const EXPECTED_DESCRIPTION = 'best character zelda';
+    const descSpan = document.createElement('span');
+    descSpan.setAttribute('slot', 'description');
+    descSpan.textContent = EXPECTED_DESCRIPTION;
+
+    // add these to the element
+    element.appendChild(nameSpan);
+    element.appendChild(descSpan);
+
+    // ACT
+    // add it to the page
+    document.body.appendChild(element);
+
+    // assert the results
+    // we're going to select the slots on the page and see if they have
+    // the same text as us rightnow
+
+  });
+
   // setting an avatar attribute
   // set a user and see if the component is what we expect
   // follow and unfollow methods
