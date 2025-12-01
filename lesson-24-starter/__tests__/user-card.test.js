@@ -82,8 +82,10 @@ describe('UserCard', ()=> {
     document.body.appendChild(element);
     // assert
     // get the img from the shadow root
+    const img = element.shadowRoot.querySelector('img');
     // check to see if src attribute fo the image is set to the random image url above.
-  })
+    expect(img.getAttribute('src')).not.toBe(EXPECTED_IMAGE);
+  });
 
 
   // set a user and see if the component is what we expect
