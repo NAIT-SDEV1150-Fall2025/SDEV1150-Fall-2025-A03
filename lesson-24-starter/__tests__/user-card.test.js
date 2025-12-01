@@ -76,7 +76,7 @@ describe('UserCard', ()=> {
 
     // you're going to set the attribute after the fact (setAttribute) to a random image
     const EXPECTED_IMAGE = 'http://cool.com/holo/charizard.jpg';
-    element.setAttribute('src', EXPECTED_IMAGE);
+    element.setAttribute('avatar', EXPECTED_IMAGE);
     // act
     // add it to the page
     document.body.appendChild(element);
@@ -84,7 +84,7 @@ describe('UserCard', ()=> {
     // get the img from the shadow root
     const img = element.shadowRoot.querySelector('img');
     // check to see if src attribute fo the image is set to the random image url above.
-    expect(img.getAttribute('src')).not.toBe(EXPECTED_IMAGE);
+    expect(img.getAttribute('src')).toBe(EXPECTED_IMAGE);
   });
 
 
