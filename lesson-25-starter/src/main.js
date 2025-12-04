@@ -29,6 +29,7 @@ main.addEventListener('follow-change', (e) => {
   // below we fixed isFollowed to followed as that's what is
   // defined
   // followedCount += e.detail.isFollowed ? 1 : -1;
+  // fixed below as
   // followedCount += e.detail.followed ? 1 : -1;
   // Or, use Array filter for accurate count
   followedCount = Array.from(
