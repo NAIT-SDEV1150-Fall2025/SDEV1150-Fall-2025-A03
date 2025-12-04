@@ -2,10 +2,26 @@ import {
   expect, // a function to pass in what your'e testing
   test, // the test itself.
   describe, // a section of the test
+  beforeEach, // this is going to run before each test
+  afterEach, // this is going to run after each test
 } from 'vitest';
 
 // I need to import the component
 import '../src/user-card.js';
+
+let element;
+
+beforeEach(() => {
+  // create the element
+  element = document.createElement('user-card');
+});
+
+afterEach(() => {
+  // remove the element from the jsdom
+  element.remove();
+  // set it to null/undefined.
+  element = null;
+});
 
 // you can create test sections with describe.
 describe('UserCard', () => {
@@ -15,7 +31,8 @@ describe('UserCard', () => {
   // renders with the right properties
   test('renders with default properties', () => {
     // create the element
-    const element = document.createElement('user-card');
+    // we removed this line because it's handled in the before each
+    // const element = document.createElement('user-card');
     // attatch to the body
     document.body.appendChild(element);
 
@@ -35,7 +52,8 @@ describe('UserCard', () => {
   // renders with a name and description
   test('renders a name and a description.', () => {
     // arrange step
-    const element = document.createElement('user-card');
+    // we removed this line because it's handled in the before each
+    // const element = document.createElement('user-card');
     // add a name span in the slot
     const EXPECTED_NAME = 'gary steves';
     const nameSpan = document.createElement('span');
@@ -71,7 +89,8 @@ describe('UserCard', () => {
   test('sets avatar attribute', () => {
     // arrange
     // you're going to need to create the element
-    const element = document.createElement('user-card');
+    // we removed this line because it's handled in the before each
+    // const element = document.createElement('user-card');
 
     // you're going to set the attribute after the fact (setAttribute) to a random image
     const EXPECTED_IMAGE = 'http://cool.com/holo/charizard.jpg';
@@ -97,7 +116,8 @@ describe('UserCard', () => {
       avatar: 'http://cool.com/holo/charizard.jpg',
     };
     // create an element
-    const element = document.createElement('user-card');
+    // we removed this line because it's handled in the before each
+    // const element = document.createElement('user-card');
     // act
     // set the user on the element  to our "expected user"
     element.user = EXPECTED_USER;
