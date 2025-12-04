@@ -154,6 +154,13 @@ class UserCard extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     console.log('Attribute changed:', name, oldValue, newValue);
     // we removed the s on avatar becuase this is different than the observed attributes
+    /* Note: We reproduced this using
+    let test = "https://placehold.co/80x80/green/yellow"
+    let userCards = document.querySelectorAll("user-card");
+    // set the attribute of one of the cards and see if it updates
+    userCards[2].setAttribute('avatar', test)
+
+    */
     //  if (name === 'avatars' && this.shadowRoot) {
     if (name === 'avatar' && this.shadowRoot) {
       const img = this.shadowRoot.querySelector('img');
