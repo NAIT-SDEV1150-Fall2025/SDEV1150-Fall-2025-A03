@@ -23,13 +23,19 @@ let followedCount = 0;
 
 // Listen on the container (event bubbles out of shadow)
 main.addEventListener('follow-change', (e) => {
+  console.log('follow-change:', e.detail);
+  console.log(e.detail.isFollowed);
   // Add one or subtract one based on follow state
-  followedCount += e.detail.isFollowed ? 1 : -1;
+  // below we fixed isFollowed to followed as that's what is
+  // defined
+  // followedCount += e.detail.isFollowed ? 1 : -1;
+  // followedCount += e.detail.followed ? 1 : -1;
   // Or, use Array filter for accurate count
-  // followedCount = Array.from(document.querySelectorAll('user-card')).filter(c => c.followed).length;
+  followedCount = Array.from(
+    document.querySelectorAll('user-card'),
+  ).filter(c => c.followed).length;
   const counterEl = document.querySelector('#follow-counter');
   counterEl.textContent = `Followed: ${followedCount}`;
-  console.log('follow-change:', e.detail);
 });
 
 // Call follow() programmatically on first card
