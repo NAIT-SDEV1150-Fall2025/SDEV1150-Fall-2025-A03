@@ -84,8 +84,11 @@ class UserCard extends HTMLElement {
       if (nameSlot) {
         nameSlot.textContent = this.#user.name || '';
       }
-
-      const descSlot = this.shadowRoot.querySelector('[name="descriptions"]');
+      // do you see the bug?
+      // below has an extra s
+      // const descSlot = this.shadowRoot.querySelector('[name="descriptions"]');
+      // below is fixed.
+      const descSlot = this.shadowRoot.querySelector('[name="description"]');
       if (descSlot) {
         descSlot.textContent = this.#user.description || '';
       }
