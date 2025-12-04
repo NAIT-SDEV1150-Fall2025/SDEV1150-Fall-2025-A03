@@ -8,8 +8,7 @@ import {
 import '../src/user-card.js';
 
 // you can create test sections with describe.
-describe('UserCard', ()=> {
-
+describe('UserCard', () => {
   // let's think about a few
   // tests we can write
   // functionality we'll be testing
