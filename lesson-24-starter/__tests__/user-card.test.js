@@ -88,6 +88,21 @@ describe('UserCard', () => {
 
 
   // set a user and see if the component is what we expect
+  test('sets user property', () => {
+    // arrange step
+    // create an "expected" user
+    // create an element
+    // act
+    // set the user on the element  to our "expected user"
+    // add it the page.
+    // assert step
+    // check avatar is set
+    // check user id
+    // check the name slot is updated
+    // check the description slot is updated
+  })
+
+
   // follow and unfollow methods
   // click follow button updates state
 });
