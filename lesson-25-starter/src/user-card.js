@@ -41,7 +41,7 @@ template.innerHTML = `
       flex: 0 0 80px;
     }
   </style>
-  
+
   <div class="card">
     <img src="" width="80" height="80" alt="avatar">
     <div class="info">
@@ -152,8 +152,10 @@ class UserCard extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'avatars' && this.shadowRoot) {
-      console.log('Attribute changed:', name, oldValue, newValue);
+    console.log('Attribute changed:', name, oldValue, newValue);
+    // we removed the s on avatar becuase this is different than the observed attributes
+    //  if (name === 'avatars' && this.shadowRoot) {
+    if (name === 'avatar' && this.shadowRoot) {
       const img = this.shadowRoot.querySelector('img');
       if (img) {
         img.src = newValue;
