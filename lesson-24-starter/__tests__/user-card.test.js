@@ -86,7 +86,6 @@ describe('UserCard', () => {
     expect(img.getAttribute('src')).toBe(EXPECTED_IMAGE);
   });
 
-
   // set a user and see if the component is what we expect
   test('sets user property', () => {
     // arrange step
@@ -106,13 +105,21 @@ describe('UserCard', () => {
     document.body.appendChild(element);
     // assert step
     // check avatar is set
+    const img = element.shadowRoot.querySelector('img');
+    expect(img.getAttribute('src')).toBe(EXPECTED_USER.avatar);
     // check user id
+    expect(element.getAttribute('user-id')).toBe(EXPECTED_USER.id);
     // check the name slot is updated
+    const nameSlot = element.shadowRoot.querySelector(
+      'slot[name="name"]',
+    );
+    expect(nameSlot.textContent).toBe(EXPECTED_USER.name);
     // check the description slot is updated
+    const descSlot = element.shadowRoot.querySelector(
+      'slot[name="description"]',
+    );
+    expect(descSlot.textContent).toBe(EXPECTED_USER.description);
   });
-
-
   // follow and unfollow methods
   // click follow button updates state
 });
-
