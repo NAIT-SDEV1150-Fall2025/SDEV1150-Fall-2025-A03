@@ -91,16 +91,25 @@ describe('UserCard', () => {
   test('sets user property', () => {
     // arrange step
     // create an "expected" user
+    const EXPECTED_USER = {
+      id: 'test123456',
+      name: 'Daniel Steves',
+      description: 'A fake user',
+      avatar: 'http://cool.com/holo/charizard.jpg',
+    };
     // create an element
+    const element = document.createElement('user-card');
     // act
     // set the user on the element  to our "expected user"
+    element.user = EXPECTED_USER;
     // add it the page.
+    document.body.appendChild(element);
     // assert step
     // check avatar is set
     // check user id
     // check the name slot is updated
     // check the description slot is updated
-  })
+  });
 
 
   // follow and unfollow methods
