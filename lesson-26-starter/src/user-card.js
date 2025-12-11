@@ -41,7 +41,7 @@ template.innerHTML = `
       flex: 0 0 80px;
     }
   </style>
-  
+
   <div class="card">
     <img src="" width="80" height="80" alt="avatar">
     <div class="info">
@@ -139,6 +139,7 @@ class UserCard extends HTMLElement {
   _setFollow(value) {
     this.#followed = value;
     this._btn.textContent = this.#followed ? 'Following' : 'Follow';
+    // debugger;
     this.dispatchEvent(new CustomEvent('follow-change', {
       detail: { id: this.getAttribute('user-id') || null, followed: this.followed },
       bubbles: true,
