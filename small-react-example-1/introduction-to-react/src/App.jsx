@@ -6,12 +6,20 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  // keeping thing in sync with state.
+  const [message, setMessage] = useState("something")
+
+  console.log(message)
 
   return (
     <>
       <h1>Introduction to React</h1>
       <p>The hot reload is functional</p>
-      <Description text={"Our first example of a component"} />
+      <input type="text"
+        value={message}
+        onChange={(event) => {setMessage(event.target.value)}}
+      />
+      <Description text={message} />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
